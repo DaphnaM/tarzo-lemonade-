@@ -83,6 +83,15 @@ export default function Home() {
       gradient: 'from-indigo-500 to-purple-500',
       bg: 'bg-indigo-50 hover:bg-indigo-100',
     },
+    {
+      path: '/compare',
+      name: 'Top 5 Comparison',
+      theme: 'Research Authority',
+      description: 'Lemonade #1, others greyed out',
+      icon: '🔬',
+      gradient: 'from-rose-500 to-pink-500',
+      bg: 'bg-rose-50 hover:bg-rose-100',
+    },
   ];
 
   return (
