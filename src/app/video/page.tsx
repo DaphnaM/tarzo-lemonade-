@@ -59,6 +59,7 @@ export default function VideoPage() {
                   playsInline
                   className="w-full h-full object-cover"
                 >
+                  <source src="/images/pets-video.mov" type="video/quicktime" />
                   <source src="/images/pets-video.mp4" type="video/mp4" />
                 </video>
               </div>

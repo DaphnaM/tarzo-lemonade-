@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-xl">🍋</span>
+            <span className="font-script text-xl text-[var(--lemonade-pink)]">L</span>
             <span className="text-lg font-bold text-[var(--lemonade-dark)]">lemonade</span>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">

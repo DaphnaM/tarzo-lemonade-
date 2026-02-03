@@ -106,7 +106,7 @@ export default function GetQuotePage() {
           {[
             { procedure: "Emergency exam", cost: "$800–$1,500", icon: "🏥" },
             { procedure: "X-rays & MRI", cost: "$1,000–$3,000", icon: "📷" },
-            { procedure: "Surgery", cost: "$3,000–$7,000", icon: "🔪" },
+            { procedure: "Surgery", cost: "$3,000–$7,000", icon: "🩺" },
             { procedure: "Cancer treatment", cost: "$5,000–$10,000+", icon: "💊" },
           ].map((item) => (
             <div key={item.procedure} className="bg-red-50 border border-red-100 rounded-xl p-6 text-center">

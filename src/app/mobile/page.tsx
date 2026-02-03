@@ -12,7 +12,7 @@ export default function MobilePage() {
       {/* App-like Header */}
       <header className="flex items-center justify-center py-4 border-b border-gray-100">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🍋</span>
+          <span className="font-script text-2xl text-[var(--lemonade-pink)]">L</span>
           <span className="font-script text-2xl text-[var(--lemonade-pink)]">Lemonade</span>
         </div>
       </header>

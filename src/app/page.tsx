@@ -3,13 +3,13 @@ import Link from 'next/link';
 export default function Home() {
   const variants = [
     {
-      path: '/get-quote',
-      name: '90 Seconds to Coverage',
-      theme: 'Speed + Simplicity',
-      description: 'Emphasizes quick quote flow and ease of use',
-      icon: '⚡',
-      gradient: 'from-pink-500 to-rose-500',
-      bg: 'bg-pink-50 hover:bg-pink-100',
+      path: '/adventure-video',
+      name: 'Adventure Video',
+      theme: 'Active Pets + Video',
+      description: 'Video hero for adventurous pet parents',
+      icon: '🎥',
+      gradient: 'from-violet-500 to-purple-500',
+      bg: 'bg-violet-50 hover:bg-violet-100',
     },
     {
       path: '/protect',
@@ -84,13 +84,22 @@ export default function Home() {
       bg: 'bg-indigo-50 hover:bg-indigo-100',
     },
     {
-      path: '/compare',
-      name: 'Top 5 Comparison',
-      theme: 'Research Authority',
-      description: 'Lemonade #1, others greyed out',
-      icon: '🔬',
+      path: '/adventure',
+      name: 'Adventure Dogs',
+      theme: 'Active Pets',
+      description: 'GIF hero for adventurous pet parents',
+      icon: '🐕',
       gradient: 'from-rose-500 to-pink-500',
       bg: 'bg-rose-50 hover:bg-rose-100',
+    },
+    {
+      path: '/get-quote',
+      name: '90 Seconds to Coverage',
+      theme: 'Speed + Simplicity',
+      description: 'Emphasizes quick quote flow and ease of use',
+      icon: '⚡',
+      gradient: 'from-pink-500 to-rose-500',
+      bg: 'bg-pink-50 hover:bg-pink-100',
     },
   ];
 
@@ -100,7 +109,7 @@ export default function Home() {
       <div className="pt-16 pb-12 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-500 shadow-lg shadow-yellow-500/30 mb-6">
-            <span className="text-4xl">🍋</span>
+            <span className="font-script text-4xl text-[var(--lemonade-pink)] bg-white px-2 rounded">L</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
             Landing Page Variants
