@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Header, Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/shared';
+import { Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/shared';
 import { ComparisonTable } from '@/components/specific';
 
 export const metadata = {
@@ -56,8 +56,6 @@ export default function PlansPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-green-50 to-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">

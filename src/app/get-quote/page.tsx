@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Header, Footer, CTAButton, TrustStrip, FAQAccordion, TestimonialCard, SectionWrapper } from '@/components/shared';
+import { Footer, CTAButton, TrustStrip, FAQAccordion, TestimonialCard, SectionWrapper } from '@/components/shared';
 
 export const metadata = {
   title: 'Pet Insurance in 90 Seconds | Lemonade',
@@ -44,8 +44,6 @@ export default function GetQuotePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-pink-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -61,9 +59,6 @@ export default function GetQuotePage() {
               Join millions of pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
-            <p className="mt-4 text-sm text-[var(--lemonade-gray)]">
-              No credit card required • Cancel anytime • No phone calls
-            </p>
             <div className="mt-8">
               <TrustStrip items={["Any licensed vet in the US", "Claims paid in minutes", "70-90% of bills covered"]} />
             </div>

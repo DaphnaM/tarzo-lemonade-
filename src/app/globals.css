@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -49,4 +50,9 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a1a1a1;
+}
+
+/* Script font for Lemonade logo */
+.font-script {
+  font-family: 'Pacifico', cursive;
 }

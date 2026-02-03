@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Header, Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/shared';
+import { Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/shared';
 import { DualCTAButtons } from '@/components/specific';
 
 export const metadata = {
@@ -45,8 +45,6 @@ export default function StartPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-purple-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
