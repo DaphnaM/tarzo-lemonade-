@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
-  title: 'Editor\'s Choice #1 Pet Insurance | Lemonade',
-  description: 'Lemonade ranked #1 for value, coverage quality, and claims experience. Get your free quote in 90 seconds.',
+  title: 'Protect Your Adventurous Pet | Lemonade',
+  description: 'Pet insurance for pets who love adventure. Fast claims, any vet, plans from $10/mo.',
 };
 
-export default function SimplePage() {
+export default function GifPage() {
   const faqItems = [
     {
       question: "Why is Lemonade ranked #1?",
@@ -37,7 +37,7 @@ export default function SimplePage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#f5f5f7]">
 
-      {/* Main Widget Section - Compact */}
+      {/* Main Widget Section */}
       <section className="py-6 md:py-8 px-4">
         <div className="max-w-md mx-auto">
           {/* The Widget Card */}
@@ -50,29 +50,34 @@ export default function SimplePage() {
               </div>
             </div>
 
-            {/* Pet Image - Smaller */}
+            {/* GIF */}
             <div className="px-3 pb-3">
-              <div className="relative w-full h-40 rounded-xl overflow-hidden">
+              <div className="relative w-full h-48 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/happy-dog.jpg"
-                  alt="Happy dog ready for coverage"
+                  src="/images/swimming-dogs.gif"
+                  alt="Dogs jumping into water"
                   fill
                   className="object-cover"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
 
-            {/* Content - Condensed */}
+            {/* Content */}
             <div className="px-5 pb-5 text-center">
               {/* Lemonade Logo */}
               <h1 className="font-script text-4xl text-[var(--lemonade-pink)] mb-1">
                 Lemonade
               </h1>
 
-              <h2 className="text-lg font-extrabold text-[var(--lemonade-dark)] mb-3">
-                Our #1 Pet Insurance Pick
+              <h2 className="text-lg font-extrabold text-[var(--lemonade-dark)] mb-2">
+                For Pets Who Love Adventure
               </h2>
+
+              <p className="text-sm text-[var(--lemonade-gray)] mb-4">
+                Accidents happen. Make sure your best friend is covered.
+              </p>
 
               {/* Compact Checkmarks */}
               <div className="space-y-2 mb-4 text-left">

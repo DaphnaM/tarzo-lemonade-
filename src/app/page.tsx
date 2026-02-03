@@ -56,6 +56,33 @@ export default function Home() {
       gradient: 'from-amber-500 to-yellow-500',
       bg: 'bg-amber-50 hover:bg-amber-100',
     },
+    {
+      path: '/mobile',
+      name: 'Mobile App Style',
+      theme: 'Ultra Minimal',
+      description: 'App-like design, CTA visible without scrolling',
+      icon: '📱',
+      gradient: 'from-slate-500 to-gray-500',
+      bg: 'bg-slate-50 hover:bg-slate-100',
+    },
+    {
+      path: '/gif',
+      name: 'Adventure GIF',
+      theme: 'Eye-Catching',
+      description: 'Animated GIF of dogs having fun',
+      icon: '🏊',
+      gradient: 'from-cyan-500 to-teal-500',
+      bg: 'bg-cyan-50 hover:bg-cyan-100',
+    },
+    {
+      path: '/video',
+      name: 'Video Background',
+      theme: 'Dynamic',
+      description: 'Auto-playing video for engagement',
+      icon: '🎬',
+      gradient: 'from-indigo-500 to-purple-500',
+      bg: 'bg-indigo-50 hover:bg-indigo-100',
+    },
   ];
 
   return (
