@@ -34,7 +34,7 @@ export default function GetQuotePage() {
     },
     {
       question: "How do I file a claim?",
-      answer: "Just open the Lemonade app, snap a photo of your vet bill, and submit. About 40% of claims are processed instantly by AI. Once approved, reimbursement goes directly to your bank account — many customers receive payment within hours."
+      answer: "Just open the Lemonade app, snap a photo of your vet bill, and submit. Many pet claims are processed instantly by AI. Once approved, reimbursement goes directly to your bank account — many customers receive payment within hours."
     },
     {
       question: "Is there a multi-pet discount?",
@@ -58,7 +58,7 @@ export default function GetQuotePage() {
               <span className="text-[var(--lemonade-pink)]">90 seconds.</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
-              Join 2 million+ pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
+              Join millions of pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
             <p className="mt-4 text-sm text-[var(--lemonade-gray)]">
@@ -84,10 +84,10 @@ export default function GetQuotePage() {
       <section className="py-8 bg-[var(--lemonade-dark)]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { stat: "4.9★", label: "App Store Rating" },
-            { stat: "2M+", label: "Pets Protected" },
-            { stat: "40%", label: "Claims Paid Instantly" },
-            { stat: "$100M+", label: "Claims Paid Out" },
+            { stat: "4.9★", label: "App Store Rating (85K+ reviews)" },
+            { stat: "~50%", label: "Pet Claims Paid Instantly" },
+            { stat: "90 sec", label: "To Get Your Quote" },
+            { stat: "Any Vet", label: "In the US Accepted" },
           ].map((item) => (
             <div key={item.label}>
               <div className="text-2xl md:text-3xl font-bold text-white">{item.stat}</div>
@@ -142,7 +142,7 @@ export default function GetQuotePage() {
             { step: "1", title: "Tell us about your pet", desc: "Name, breed, age — that's it. Takes 30 seconds." },
             { step: "2", title: "Customize your plan", desc: "Choose deductible, reimbursement rate, and annual limit." },
             { step: "3", title: "Visit any vet", desc: "Go to your regular vet, a specialist, or emergency clinic." },
-            { step: "4", title: "Get reimbursed fast", desc: "Submit claims in the app. 40% are paid instantly." },
+            { step: "4", title: "Get reimbursed fast", desc: "Submit claims in the app. Many are paid instantly." },
           ].map((item) => (
             <div key={item.step} className="text-center bg-white rounded-xl p-6 shadow-sm">
               <div className="w-14 h-14 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
@@ -205,15 +205,15 @@ export default function GetQuotePage() {
       {/* Social Proof */}
       <SectionWrapper background="gray">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--lemonade-dark)] text-center mb-4">
-          Join 2 million+ happy pet parents
+          What pet parents are saying
         </h2>
         <p className="text-lg text-[var(--lemonade-gray)] text-center mb-10 max-w-2xl mx-auto">
           Rated 4.9 stars on the App Store from 85,000+ reviews
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <TestimonialCard quote="My dog needed emergency surgery for a swallowed toy — $4,200 bill. Lemonade covered $3,700 of it. Claim was approved the same day I submitted it." />
-          <TestimonialCard quote="The signup took literally 2 minutes. I've submitted 3 claims and each one was processed within 24 hours. So much easier than my old insurer." />
-          <TestimonialCard quote="After my cat was diagnosed with diabetes, Lemonade covered the ongoing treatment, medications, and special food. Total lifesaver for our budget." />
+          <TestimonialCard quote="Easy to use and affordable. I was able to customize my coverage to fit my budget. Claims are processed quickly and I always get reimbursed within a few days." />
+          <TestimonialCard quote="The app is so simple to use. Filing a claim takes less than 5 minutes and I usually hear back the same day. Highly recommend for any pet owner." />
+          <TestimonialCard quote="Switched from another pet insurance company and couldn't be happier. Lemonade's prices are better and their customer service is actually responsive." />
         </div>
         <div className="text-center mt-10">
           <CTAButton>Get My Free Quote</CTAButton>

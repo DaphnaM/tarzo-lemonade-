@@ -31,7 +31,7 @@ export default function ProtectPage() {
     },
     {
       question: "How do I file a claim after an emergency?",
-      answer: "Open the Lemonade app, tap 'File a Claim,' take a photo of your itemized vet bill, and briefly describe what happened. About 40% of claims are paid instantly. Reimbursement goes directly to your bank account."
+      answer: "Open the Lemonade app, tap 'File a Claim,' take a photo of your itemized vet bill, and briefly describe what happened. Many pet claims are paid instantly by AI. Reimbursement goes directly to your bank account."
     },
     {
       question: "What if I can't afford the upfront vet bill?",
@@ -245,7 +245,7 @@ export default function ProtectPage() {
             { step: "1", title: "Emergency happens", desc: "Rush to any vet or emergency hospital — your choice" },
             { step: "2", title: "Get treatment", desc: "Focus on your pet. Pay the vet bill (keep the receipt)" },
             { step: "3", title: "File a claim", desc: "Open the app, snap a photo, submit in 2 minutes" },
-            { step: "4", title: "Get reimbursed", desc: "40% of claims paid instantly. Money to your bank" },
+            { step: "4", title: "Get reimbursed", desc: "Many claims paid instantly. Money to your bank" },
           ].map((item) => (
             <div key={item.step} className="text-center bg-white rounded-xl p-6 shadow-sm">
               <div className="w-14 h-14 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">

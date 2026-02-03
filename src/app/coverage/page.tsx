@@ -14,7 +14,7 @@ export default function CoveragePage() {
     },
     {
       question: "How does the claims process actually work?",
-      answer: "You pay your vet bill, then open the Lemonade app and take a photo of the itemized invoice. Describe what happened in a few sentences and submit. About 40% of claims are reviewed and paid instantly by AI. Larger claims get human review within 24-48 hours. Money goes directly to your bank account."
+      answer: "You pay your vet bill, then open the Lemonade app and take a photo of the itemized invoice. Describe what happened in a few sentences and submit. Many pet claims are reviewed and paid instantly by AI. Larger claims get human review within 24-48 hours. Money goes directly to your bank account."
     },
     {
       question: "What if my claim gets denied?",
@@ -34,7 +34,7 @@ export default function CoveragePage() {
     },
     {
       question: "How long has Lemonade been around?",
-      answer: "Lemonade launched in 2016 and started offering pet insurance in 2020. They now protect over 2 million pets. The company is publicly traded (NYSE: LMND) and is headquartered in New York City."
+      answer: "Lemonade launched in 2016 and started offering pet insurance in 2020. They now protect millions of pets across the US. The company is publicly traded (NYSE: LMND) and is headquartered in New York City."
     },
     {
       question: "What happens when my policy renews?",
@@ -61,12 +61,12 @@ export default function CoveragePage() {
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
             <p className="mt-4 text-sm text-[var(--lemonade-gray)]">
-              Any licensed vet • 40% of claims paid instantly • Cancel anytime
+              Any licensed vet • Fast AI-powered claims • Cancel anytime
             </p>
             <div className="mt-8">
               <ProofStrip
                 rating="⭐️⭐️⭐️⭐️⭐️"
-                highlights={["85,000+ App Store reviews", "2M+ pets protected", "Public benefit corp"]}
+                highlights={["85,000+ App Store reviews", "Millions of pets protected", "Public benefit corp"]}
               />
             </div>
           </div>
@@ -86,10 +86,10 @@ export default function CoveragePage() {
       <section className="py-8 bg-[var(--lemonade-dark)]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { stat: "4.9★", label: "App Store rating" },
-            { stat: "2M+", label: "Pets protected" },
-            { stat: "40%", label: "Claims paid instantly" },
-            { stat: "24/7", label: "Support available" },
+            { stat: "4.9★", label: "App Store rating (85K+ reviews)" },
+            { stat: "B Corp", label: "Public Benefit Corporation" },
+            { stat: "~50%", label: "Pet claims paid instantly" },
+            { stat: "In-App", label: "24/7 AI + human support" },
           ].map((item) => (
             <div key={item.label}>
               <div className="text-2xl md:text-3xl font-extrabold text-white">{item.stat}</div>
@@ -119,7 +119,7 @@ export default function CoveragePage() {
             {
               icon: "🤖",
               title: "AI-powered, human-backed",
-              desc: "AI handles routine claims instantly (40% paid in seconds). Complex cases get human review. You get the best of both worlds: speed and empathy."
+              desc: "AI handles routine claims instantly (many paid in seconds). Complex cases get human review. You get the best of both worlds: speed and empathy."
             },
             {
               icon: "📱",
@@ -148,13 +148,13 @@ export default function CoveragePage() {
           Don&apos;t just take our word for it — here&apos;s what customers are saying
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <TestimonialCard quote="I was skeptical at first, but when my dog needed emergency surgery, Lemonade approved the claim the same day. $3,700 reimbursed within 48 hours. I'm a believer now." />
-          <TestimonialCard quote="The whole experience is so different from traditional insurance. The app is beautiful, claims are easy, and when I had a question, a real person responded within minutes." />
-          <TestimonialCard quote="After my cat was diagnosed with a chronic condition, I was worried they'd find a way to drop us. Instead, they've covered every treatment without hassle. Truly impressed." />
+          <TestimonialCard quote="Very easy signup process and reasonable rates. When I had to file a claim, it was straightforward through the app and I got reimbursed quickly." />
+          <TestimonialCard quote="I appreciate how transparent they are about what's covered and what isn't. No surprises. The Giveback program where they donate unclaimed premiums is a nice bonus." />
+          <TestimonialCard quote="Customer service has been great whenever I've had questions. The app makes everything simple and I can see my policy details anytime." />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
-          <TestimonialCard quote="First-time pet insurance buyer here. Submitted a claim after a vet visit — approved same day, money in my account within 3 days. Couldn't be easier." />
-          <TestimonialCard quote="I've had pet insurance with 3 different companies. Lemonade is by far the most transparent and easiest to work with. Their Giveback program is the cherry on top." />
+          <TestimonialCard quote="Compared rates with several pet insurance companies and Lemonade had the best combination of coverage and price for my situation." />
+          <TestimonialCard quote="Love that I can customize my deductible and reimbursement percentage. Made it easy to find a plan that fits my budget." />
         </div>
         <div className="text-center mt-10">
           <CTAButton>Join 2 Million+ Happy Pet Parents</CTAButton>
@@ -246,7 +246,7 @@ export default function CoveragePage() {
             Get peace of mind in 90 seconds
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-            Join 2 million+ pet parents who trust Lemonade to protect their furry family members. See your price instantly — no commitment required.
+            Join the millions of pet parents who trust Lemonade to protect their furry family members. See your price instantly — no commitment required.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote</CTAButton>
           <p className="mt-4 text-sm text-pink-200">
