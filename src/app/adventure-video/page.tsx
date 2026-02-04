@@ -47,8 +47,7 @@ export default function AdventureVideoPage() {
             playsInline
             className="w-full h-full object-cover object-[center_70%]"
           >
-            <source src="/images/pets-video.mov" type="video/quicktime" />
-            <source src="/images/pets-video.mp4" type="video/mp4" />
+            <source src="/images/pets-video-web.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
         </div>
