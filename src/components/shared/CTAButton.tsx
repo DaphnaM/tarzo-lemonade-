@@ -6,7 +6,7 @@ interface CTAButtonProps {
   className?: string;
 }
 
-const CTA_LINK = "https://www.lemonade.com/?utm_medium=cellxpert_38307_1137699&utm_source=dorbrightsync_rent_us&cxd=38307_1137699&utm_campaign=&utm_content=&utm_term=%5Bafp1%5D";
+const CTA_LINK = "https://go.lemonade.com/visit/?bta=38307&nci=5722";
 
 export default function CTAButton({
   children,
