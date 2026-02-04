@@ -116,57 +116,58 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
-      <div className="pt-16 pb-12 px-6">
+      <div className="pt-10 md:pt-16 pb-8 md:pb-12 px-4 md:px-6">
         <div className="max-w-5xl mx-auto text-center">
           {/* Logos */}
-          <div className="flex items-center justify-center gap-6 mb-6">
-            <div className="bg-white rounded-2xl p-3 shadow-lg">
+          <div className="flex items-center justify-center gap-4 md:gap-6 mb-4 md:mb-6">
+            <div className="bg-white rounded-2xl p-3 shadow-lg animate-fade-in-up" style={{ animationDelay: '0ms' }}>
               <Image
                 src="/TARZO-LogoFull-BLK.png"
                 alt="Tarzo"
-                width={120}
+                width={40}
                 height={40}
-                className="h-10 w-auto"
+                className="w-10 h-10"
               />
             </div>
-            <span className="text-slate-500 text-2xl">×</span>
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30">
+            <span className="text-slate-500 text-2xl animate-fade-in" style={{ animationDelay: '150ms' }}>×</span>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               <span className="font-script text-3xl text-white">L</span>
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 md:mb-4 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             Tarzo Landing Page Variants
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-4">
+          <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto mb-3 md:mb-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             A/B test variants for Lemonade Pet Insurance. Click any card to preview.
           </p>
-          <p className="text-sm text-slate-500 max-w-xl mx-auto">
+          <p className="text-xs md:text-sm text-slate-500 max-w-xl mx-auto animate-fade-in-up" style={{ animationDelay: '400ms' }}>
             Created by Tarzo in partnership with Lemonade to test different messaging approaches for pet insurance acquisition.
           </p>
         </div>
       </div>
 
       {/* Cards Grid */}
-      <div className="px-6 pb-16">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="px-4 md:px-6 pb-12 md:pb-16">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {variants.map((variant, index) => (
             <Link
               key={variant.path}
               href={variant.path}
-              className={`group relative overflow-hidden rounded-2xl ${variant.bg} border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
+              className={`group relative overflow-hidden rounded-2xl ${variant.bg} border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl animate-fade-in-up`}
+              style={{ animationDelay: `${500 + index * 75}ms` }}
             >
               {/* Gradient accent bar */}
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${variant.gradient}`} />
 
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{variant.icon}</span>
+              <div className="p-4 md:p-6">
+                <div className="flex items-start justify-between mb-3 md:mb-4">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <span className="text-2xl md:text-3xl">{variant.icon}</span>
                     <div>
-                      <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                      <span className="text-[10px] md:text-xs font-semibold text-slate-500 uppercase tracking-wider">
                         Version {index + 1}
                       </span>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-lg md:text-xl font-bold text-slate-900">
                         {variant.name}
                       </h2>
                     </div>
@@ -178,15 +179,15 @@ export default function Home() {
                   </div>
                 </div>
 
-                <p className="text-slate-600 mb-4">
+                <p className="text-sm md:text-base text-slate-600 mb-3 md:mb-4">
                   {variant.description}
                 </p>
 
-                <div className="flex items-center justify-between">
-                  <span className={`inline-block px-3 py-1.5 rounded-full text-xs font-semibold bg-white/80 text-slate-700 shadow-sm`}>
+                <div className="flex items-center justify-between gap-2">
+                  <span className={`inline-block px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold bg-white/80 text-slate-700 shadow-sm`}>
                     {variant.theme}
                   </span>
-                  <code className="text-xs text-slate-400 font-mono">
+                  <code className="text-[10px] md:text-xs text-slate-400 font-mono">
                     {variant.path}
                   </code>
                 </div>
