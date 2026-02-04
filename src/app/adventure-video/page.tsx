@@ -45,7 +45,7 @@ export default function AdventureVideoPage() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover object-[center_70%]"
+            className="w-full h-full object-cover object-[center_75%]"
           >
             <source src="/images/pets-video-web.mp4" type="video/mp4" />
           </video>

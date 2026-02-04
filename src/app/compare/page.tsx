@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
@@ -9,7 +10,10 @@ const insurers = [
   {
     rank: 1,
     name: 'Lemonade',
-    logo: 'L',
+    logoText: 'Lemonade',
+    logoStyle: 'font-script text-2xl',
+    logoImage: null, // Use text logo for Lemonade
+    brandColor: '#FF0083',
     score: 9.8,
     monthlyFrom: '$10',
     claimSpeed: 'Minutes (AI)',
@@ -20,7 +24,10 @@ const insurers = [
   {
     rank: 2,
     name: 'Healthy Paws',
-    logo: '🐾',
+    logoText: 'Healthy Paws',
+    logoStyle: 'font-bold text-lg',
+    logoImage: '/images/healthy-paws-logo.png',
+    brandColor: '#2E7D32',
     score: 8.4,
     monthlyFrom: '$15',
     claimSpeed: '~2 days',
@@ -31,7 +38,10 @@ const insurers = [
   {
     rank: 3,
     name: 'Embrace',
-    logo: '🤗',
+    logoText: 'Embrace',
+    logoStyle: 'font-bold text-lg',
+    logoImage: '/images/embrace-logo.jpg',
+    brandColor: '#E65100',
     score: 8.1,
     monthlyFrom: '$13',
     claimSpeed: '5-10 days',
@@ -42,7 +52,10 @@ const insurers = [
   {
     rank: 4,
     name: 'Pets Best',
-    logo: '⭐',
+    logoText: 'Pets Best',
+    logoStyle: 'font-bold text-lg',
+    logoImage: '/images/pets-best-logo.jpg',
+    brandColor: '#1565C0',
     score: 7.9,
     monthlyFrom: '$12',
     claimSpeed: '3-7 days',
@@ -53,7 +66,10 @@ const insurers = [
   {
     rank: 5,
     name: 'Trupanion',
-    logo: '🏥',
+    logoText: 'Trupanion',
+    logoStyle: 'font-bold text-lg',
+    logoImage: '/images/trupanion-logo.png',
+    brandColor: '#7B1FA2',
     score: 7.6,
     monthlyFrom: '$25',
     claimSpeed: 'Instant (at vet)',
@@ -127,7 +143,7 @@ export default function ComparePage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-12 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block px-4 py-1 bg-[var(--lemonade-pink)] rounded-full text-sm font-bold mb-4">
+          <span className="inline-block px-4 py-1 bg-emerald-500 rounded-full text-sm font-bold mb-4">
             2026 Comparison
           </span>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -158,14 +174,17 @@ export default function ComparePage() {
                 key={insurer.rank}
                 className={`relative rounded-2xl border-2 transition-all ${
                   insurer.isWinner
-                    ? 'border-[var(--lemonade-pink)] bg-gradient-to-r from-pink-50 to-white shadow-xl scale-[1.02] z-10'
-                    : 'border-gray-200 bg-gray-50 opacity-60'
+                    ? 'border-amber-400 bg-gradient-to-r from-amber-50 to-white shadow-xl scale-[1.02] z-10'
+                    : 'bg-white hover:shadow-md'
                 }`}
+                style={{
+                  borderColor: insurer.isWinner ? undefined : `${insurer.brandColor}30`
+                }}
               >
                 {/* Winner Badge */}
                 {insurer.isWinner && (
                   <div className="absolute -top-3 left-6">
-                    <span className="inline-flex items-center gap-1 bg-[var(--lemonade-pink)] text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                    <span className="inline-flex items-center gap-1 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                       🏆 Our #1 Pick
                     </span>
                   </div>
@@ -174,50 +193,72 @@ export default function ComparePage() {
                 <div className="p-6">
                   <div className="flex items-center gap-4">
                     {/* Rank */}
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-xl ${
-                      insurer.isWinner
-                        ? 'bg-[var(--lemonade-pink)] text-white'
-                        : 'bg-gray-300 text-gray-500'
-                    }`}>
+                    <div
+                      className={`w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-xl ${
+                        insurer.isWinner ? 'bg-amber-500 text-white' : 'text-white'
+                      }`}
+                      style={{
+                        backgroundColor: insurer.isWinner ? undefined : insurer.brandColor
+                      }}
+                    >
                       {insurer.rank}
                     </div>
 
                     {/* Logo & Name */}
                     <div className="flex items-center gap-3 flex-1">
-                      <span className={`text-3xl ${insurer.isWinner ? 'font-script text-[var(--lemonade-pink)]' : ''}`}>{insurer.logo}</span>
+                      {insurer.logoImage ? (
+                        <div className="relative w-24 h-8 flex-shrink-0">
+                          <Image
+                            src={insurer.logoImage}
+                            alt={`${insurer.name} logo`}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-24 flex-shrink-0">
+                          <span
+                            className={insurer.logoStyle}
+                            style={{ color: insurer.brandColor }}
+                          >
+                            {insurer.logoText}
+                          </span>
+                        </div>
+                      )}
                       <div>
-                        <h3 className={`text-xl font-bold ${insurer.isWinner ? 'text-[var(--lemonade-dark)]' : 'text-gray-500'}`}>
-                          {insurer.name}
-                        </h3>
-                        <span className={`text-xs ${insurer.isWinner ? 'text-[var(--lemonade-pink)]' : 'text-gray-400'}`}>
+                        <span className="font-bold text-[var(--lemonade-dark)]">{insurer.name}</span>
+                        <div className="text-xs mt-0.5 text-gray-500">
                           {insurer.highlight}
-                        </span>
+                        </div>
                       </div>
                     </div>
 
                     {/* Score */}
                     <div className="text-right">
-                      <div className={`text-2xl font-extrabold ${insurer.isWinner ? 'text-[var(--lemonade-pink)]' : 'text-gray-400'}`}>
+                      <div
+                        className={`text-2xl font-extrabold ${insurer.isWinner ? 'text-amber-500' : ''}`}
+                        style={{ color: insurer.isWinner ? undefined : insurer.brandColor }}
+                      >
                         {insurer.score}
                       </div>
-                      <div className="text-xs text-gray-400">Score</div>
+                      <div className="text-xs text-gray-500">Score</div>
                     </div>
                   </div>
 
                   {/* Details - Only show for winner */}
                   {insurer.isWinner && (
-                    <div className="mt-6 pt-6 border-t border-pink-200">
+                    <div className="mt-6 pt-6 border-t border-amber-200">
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-[var(--lemonade-pink)]">{insurer.monthlyFrom}</div>
+                          <div className="text-2xl font-bold text-emerald-600">{insurer.monthlyFrom}</div>
                           <div className="text-xs text-gray-500">From/month</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-[var(--lemonade-pink)]">{insurer.claimSpeed}</div>
+                          <div className="text-2xl font-bold text-emerald-600">{insurer.claimSpeed}</div>
                           <div className="text-xs text-gray-500">Claims</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-[var(--lemonade-pink)]">Any</div>
+                          <div className="text-2xl font-bold text-emerald-600">Any</div>
                           <div className="text-xs text-gray-500">Vet accepted</div>
                         </div>
                       </div>
@@ -233,7 +274,7 @@ export default function ComparePage() {
                         ))}
                       </div>
 
-                      <CTAButton size="large" className="w-full">
+                      <CTAButton size="large" className="w-full !bg-emerald-500 hover:!bg-emerald-600">
                         Get Lemonade Quote →
                       </CTAButton>
                     </div>
@@ -241,9 +282,9 @@ export default function ComparePage() {
 
                   {/* Minimal details for non-winners */}
                   {!insurer.isWinner && (
-                    <div className="mt-4 flex items-center justify-between text-sm text-gray-400">
-                      <span>From {insurer.monthlyFrom}/mo</span>
-                      <span>Claims: {insurer.claimSpeed}</span>
+                    <div className="mt-4 flex items-center justify-between text-sm">
+                      <span className="text-gray-600">From <strong style={{ color: insurer.brandColor }}>{insurer.monthlyFrom}</strong>/mo</span>
+                      <span className="text-gray-500">Claims: {insurer.claimSpeed}</span>
                     </div>
                   )}
                 </div>
@@ -266,7 +307,7 @@ export default function ComparePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {researchVariables.map((variable, i) => (
               <div key={i} className="bg-white rounded-lg px-3 py-2 text-sm text-[var(--lemonade-gray)] border border-gray-200">
-                <span className="text-[var(--lemonade-pink)] mr-2">✓</span>
+                <span className="text-emerald-500 mr-2">✓</span>
                 {variable}
               </div>
             ))}
@@ -307,7 +348,7 @@ export default function ComparePage() {
                 desc: 'Visit any licensed veterinarian, specialist, or emergency hospital in the US. No network restrictions.'
               },
             ].map((item, i) => (
-              <div key={i} className="flex gap-4 p-4 bg-pink-50 rounded-xl border border-pink-100">
+              <div key={i} className="flex gap-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
                 <span className="text-3xl">{item.icon}</span>
                 <div>
                   <h3 className="font-bold text-[var(--lemonade-dark)] mb-1">{item.title}</h3>
@@ -318,7 +359,7 @@ export default function ComparePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <CTAButton size="large">See If Lemonade Is Right For You →</CTAButton>
+            <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">See If Lemonade Is Right For You →</CTAButton>
           </div>
         </div>
       </section>
@@ -346,7 +387,7 @@ export default function ComparePage() {
           <p className="text-gray-400 mb-6">
             Get a free quote in 90 seconds
           </p>
-          <CTAButton size="large">
+          <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">
             Get Your Free Lemonade Quote →
           </CTAButton>
         </div>
