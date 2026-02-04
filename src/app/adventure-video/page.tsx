@@ -195,9 +195,9 @@ export default function AdventureVideoPage() {
             </div>
           </div>
 
-          <div className="mt-8 bg-[var(--lemonade-pink)] text-white rounded-xl p-6 text-center">
-            <p className="font-bold mb-2">🎁 Add wellness coverage from $1.89/month</p>
-            <p className="text-pink-100 text-sm">Vaccinations, flea/tick prevention, annual checkups & more</p>
+          <div className="mt-8 bg-pink-100 border border-pink-200 rounded-xl p-4 text-center max-w-md mx-auto">
+            <p className="font-semibold text-[var(--lemonade-dark)] text-sm">🎁 Optional wellness add-on available</p>
+            <p className="text-[var(--lemonade-gray)] text-xs">Vaccinations, flea/tick prevention, annual checkups & more</p>
           </div>
         </div>
       </section>

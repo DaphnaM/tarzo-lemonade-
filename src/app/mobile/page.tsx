@@ -11,8 +11,7 @@ export default function MobilePage() {
     <div className="min-h-screen bg-white flex flex-col">
       {/* App-like Header */}
       <header className="flex items-center justify-center py-4 border-b border-gray-100">
-        <div className="flex items-center gap-2">
-          <span className="font-script text-2xl text-[var(--lemonade-pink)]">L</span>
+        <div className="flex items-center gap-1">
           <span className="font-script text-2xl text-[var(--lemonade-pink)]">Lemonade</span>
         </div>
       </header>
@@ -65,6 +64,20 @@ export default function MobilePage() {
           </div>
         </div>
 
+        {/* Cost Comparison */}
+        <div className="flex gap-3 mb-6">
+          <div className="flex-1 bg-red-50 border border-red-200 rounded-xl p-3 text-center">
+            <div className="text-xs text-red-600 mb-1">Without insurance</div>
+            <div className="text-xl font-bold text-red-600">$3,000+</div>
+            <div className="text-xs text-[var(--lemonade-gray)]">Avg. surgery</div>
+          </div>
+          <div className="flex-1 bg-green-50 border border-green-200 rounded-xl p-3 text-center">
+            <div className="text-xs text-green-600 mb-1">With Lemonade</div>
+            <div className="text-xl font-bold text-green-600">$10/mo</div>
+            <div className="text-xs text-[var(--lemonade-gray)]">Starting at</div>
+          </div>
+        </div>
+
         {/* Spacer */}
         <div className="flex-1" />
 
@@ -74,7 +87,7 @@ export default function MobilePage() {
             Get My Price →
           </CTAButton>
           <p className="text-center text-xs text-[var(--lemonade-gray)]">
-            Free quote · 90 seconds · No commitment
+            Free quote · 90 seconds · Cancel anytime
           </p>
         </div>
       </main>

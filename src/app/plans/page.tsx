@@ -71,7 +71,7 @@ export default function PlansPage() {
             </p>
             <CTAButton size="large">See My Price</CTAButton>
             <p className="mt-4 text-sm text-[var(--lemonade-gray)]">
-              Free quote • No credit card required • Cancel anytime
+              Free quote • Cancel anytime • Any licensed vet
             </p>
           </div>
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">

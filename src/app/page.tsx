@@ -3,13 +3,13 @@ import Link from 'next/link';
 export default function Home() {
   const variants = [
     {
-      path: '/get-quote',
-      name: '90 Seconds to Coverage',
-      theme: 'Speed + Simplicity',
-      description: 'Emphasizes quick quote flow and ease of use',
-      icon: '⚡',
-      gradient: 'from-pink-500 to-rose-500',
-      bg: 'bg-pink-50 hover:bg-pink-100',
+      path: '/adventure-video',
+      name: 'Adventure Video',
+      theme: 'Active Pets + Video',
+      description: 'Video hero for adventurous pet parents',
+      icon: '🎥',
+      gradient: 'from-violet-500 to-purple-500',
+      bg: 'bg-violet-50 hover:bg-violet-100',
     },
     {
       path: '/protect',
@@ -84,13 +84,31 @@ export default function Home() {
       bg: 'bg-indigo-50 hover:bg-indigo-100',
     },
     {
+      path: '/adventure',
+      name: 'Adventure Dogs',
+      theme: 'Active Pets',
+      description: 'GIF hero for adventurous pet parents',
+      icon: '🐕',
+      gradient: 'from-rose-500 to-pink-500',
+      bg: 'bg-rose-50 hover:bg-rose-100',
+    },
+    {
       path: '/compare',
       name: 'Top 5 Comparison',
       theme: 'Research Authority',
       description: 'Lemonade #1, others greyed out',
       icon: '🔬',
-      gradient: 'from-rose-500 to-pink-500',
-      bg: 'bg-rose-50 hover:bg-rose-100',
+      gradient: 'from-teal-500 to-emerald-500',
+      bg: 'bg-teal-50 hover:bg-teal-100',
+    },
+    {
+      path: '/get-quote',
+      name: '90 Seconds to Coverage',
+      theme: 'Speed + Simplicity',
+      description: 'Emphasizes quick quote flow and ease of use',
+      icon: '⚡',
+      gradient: 'from-pink-500 to-rose-500',
+      bg: 'bg-pink-50 hover:bg-pink-100',
     },
   ];
 

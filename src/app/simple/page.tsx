@@ -65,13 +65,13 @@ export default function SimplePage() {
 
             {/* Content - Condensed */}
             <div className="px-5 pb-5 text-center">
-              {/* Lemonade Logo */}
-              <h1 className="font-script text-4xl text-[var(--lemonade-pink)] mb-1">
-                Lemonade
+              {/* Company Name */}
+              <h1 className="text-2xl font-extrabold text-[var(--lemonade-dark)] mb-1">
+                Lemonade Pet Insurance
               </h1>
 
-              <h2 className="text-lg font-extrabold text-[var(--lemonade-dark)] mb-3">
-                Our #1 Pet Insurance Pick
+              <h2 className="text-sm text-[var(--lemonade-gray)] mb-3">
+                Top-rated coverage for dogs & cats
               </h2>
 
               {/* Compact Checkmarks */}
