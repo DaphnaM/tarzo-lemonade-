@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const variants = [
@@ -60,7 +61,7 @@ export default function Home() {
       path: '/mobile',
       name: 'Mobile App Style',
       theme: 'Ultra Minimal',
-      description: 'App-like design, CTA visible without scrolling',
+      description: 'App-like design, CTA visible without scrolling (mobile only)',
       icon: '📱',
       gradient: 'from-slate-500 to-gray-500',
       bg: 'bg-slate-50 hover:bg-slate-100',
@@ -117,14 +118,30 @@ export default function Home() {
       {/* Header */}
       <div className="pt-16 pb-12 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30 mb-6">
-            <span className="font-script text-4xl text-white">L</span>
+          {/* Logos */}
+          <div className="flex items-center justify-center gap-6 mb-6">
+            <div className="bg-white rounded-2xl p-3 shadow-lg">
+              <Image
+                src="/TARZO-LogoFull-BLK.png"
+                alt="Tarzo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </div>
+            <span className="text-slate-500 text-2xl">×</span>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30">
+              <span className="font-script text-3xl text-white">L</span>
+            </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Landing Page Variants
+            Tarzo Landing Page Variants
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-4">
             A/B test variants for Lemonade Pet Insurance. Click any card to preview.
+          </p>
+          <p className="text-sm text-slate-500 max-w-xl mx-auto">
+            Created by Tarzo in partnership with Lemonade to test different messaging approaches for pet insurance acquisition.
           </p>
         </div>
       </div>
@@ -179,36 +196,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* URLs Section */}
-      <div className="px-6 pb-16">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-slate-800/50 backdrop-blur rounded-2xl border border-slate-700 p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-2xl">🔗</span>
-              <h3 className="font-bold text-white text-lg">Direct URLs for A/B Testing</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {variants.map((variant, index) => (
-                <div key={variant.path} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900/50">
-                  <span className="text-slate-500 text-sm">V{index + 1}</span>
-                  <code className="text-pink-400 text-sm font-mono">
-                    yourdomain.com{variant.path}
-                  </code>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="px-6 pb-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-slate-500 text-sm">
-            Built for A/B testing · Deployed on Netlify
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
