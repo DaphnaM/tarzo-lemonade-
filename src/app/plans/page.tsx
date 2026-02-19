@@ -287,7 +287,7 @@ export default function PlansPage() {
       <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            See your personalized price in 90 seconds
+            See your personalized price: Save Up to 90% on Vet Bills
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
             No commitment, no credit card, no phone calls. Just enter your pet&apos;s info and see what you&apos;d pay.

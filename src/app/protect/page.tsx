@@ -277,7 +277,7 @@ export default function ProtectPage() {
             Don&apos;t wait until after the first emergency.
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-            The best time to get pet insurance is before you need it. Get covered in 90 seconds — accident coverage starts tomorrow.
+            The best time to get pet insurance is before you need it. Get covered: Save Up to 90% on Vet Bills — accident coverage starts tomorrow.
           </p>
           <CTAButton variant="secondary" size="large">Protect My Pet Now</CTAButton>
           <p className="mt-4 text-sm text-pink-200">

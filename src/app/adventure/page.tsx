@@ -295,7 +295,7 @@ export default function AdventurePage() {
             They&apos;re always ready for the next adventure.
           </h2>
           <p className="text-pink-100 mb-8 text-lg">
-            Make sure you&apos;re ready too. Get covered in 90 seconds.
+            Make sure you&apos;re ready too. Get covered: Save Up to 90% on Vet Bills.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">
             Get My Free Quote

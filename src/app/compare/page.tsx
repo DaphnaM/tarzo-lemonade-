@@ -385,7 +385,7 @@ export default function ComparePage() {
             Ready to protect your pet?
           </h2>
           <p className="text-gray-400 mb-6">
-            Get a free quote in 90 seconds
+            Get a free quote: Save Up to 90% on Vet Bills
           </p>
           <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">
             Get Your Free Lemonade Quote →

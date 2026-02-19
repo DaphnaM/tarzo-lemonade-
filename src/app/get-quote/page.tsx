@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, TrustStrip, FAQAccordion, TestimonialCard, SectionWrapper } from '@/components/shared';
 
 export const metadata = {
-  title: 'Pet Insurance in 90 Seconds | Lemonade',
+  title: 'Pet Insurance: Save Up to 90% on Vet Bills | Lemonade',
   description: 'Protect your dog or cat today — customize your plan in minutes. No phone calls. Cancel anytime.',
 };
 
@@ -127,7 +127,7 @@ export default function GetQuotePage() {
       {/* How It Works */}
       <SectionWrapper background="gray">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--lemonade-dark)] text-center mb-4">
-          From quote to coverage in 90 seconds
+          From quote to coverage: Save Up to 90% on Vet Bills
         </h2>
         <p className="text-lg text-[var(--lemonade-gray)] text-center mb-12 max-w-2xl mx-auto">
           No paperwork. No phone calls. No waiting on hold. Just a few taps and you&apos;re covered.
@@ -233,7 +233,7 @@ export default function GetQuotePage() {
             Your pet deserves the best care.
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-            Don&apos;t wait until an emergency. Get peace of mind in 90 seconds — it&apos;s free to see your price.
+            Don&apos;t wait until an emergency. Get peace of mind: Save Up to 90% on Vet Bills — it&apos;s free to see your price.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote Now</CTAButton>
           <p className="mt-4 text-sm text-pink-200">

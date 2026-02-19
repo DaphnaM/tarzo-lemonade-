@@ -241,7 +241,7 @@ export default function CoveragePage() {
       <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Get peace of mind in 90 seconds
+            Get peace of mind: Save Up to 90% on Vet Bills
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
             Join the millions of pet parents who trust Lemonade to protect their furry family members. See your price instantly — no commitment required.

@@ -3,7 +3,7 @@ import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
   title: 'Editor\'s Choice #1 Pet Insurance | Lemonade',
-  description: 'Lemonade ranked #1 for value, coverage quality, and claims experience. Get your free quote in 90 seconds.',
+  description: 'Lemonade ranked #1 for value, coverage quality, and claims experience. Get your free quote: Save Up to 90% on Vet Bills.',
 };
 
 export default function SimplePage() {

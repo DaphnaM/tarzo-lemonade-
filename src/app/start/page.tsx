@@ -197,7 +197,7 @@ export default function StartPage() {
       {/* How It Works */}
       <SectionWrapper background="white">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--lemonade-dark)] text-center mb-4">
-          Get your personalized quote in 90 seconds
+          Get your personalized quote: Save Up to 90% on Vet Bills
         </h2>
         <p className="text-lg text-[var(--lemonade-gray)] text-center mb-12 max-w-2xl mx-auto">
           Quick, easy, and tailored to your pet
@@ -269,7 +269,7 @@ export default function StartPage() {
             Get a quote tailored to your pet
           </h2>
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-            Whether you have a playful puppy or a senior cat, Lemonade has coverage designed for them. See your personalized price in 90 seconds.
+            Whether you have a playful puppy or a senior cat, Lemonade has coverage designed for them. See your personalized price: Save Up to 90% on Vet Bills.
           </p>
           <DualCTAButtons
             dogLabel="🐶 Dog Quote"
