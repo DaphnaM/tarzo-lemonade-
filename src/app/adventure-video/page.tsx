@@ -76,7 +76,7 @@ export default function AdventureVideoPage() {
           {[
             { stat: "4.9★", label: "App Store rating" },
             { stat: "~50%", label: "Claims paid instantly" },
-            { stat: "90 sec", label: "To get a quote" },
+            { stat: "90%", label: "Of vet bills covered" },
             { stat: "Any", label: "Licensed US vet" },
           ].map((item, i) => (
             <div key={i}>
@@ -210,7 +210,7 @@ export default function AdventureVideoPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: "1", title: "Get a quote", desc: "Tell us about your dog. Takes 90 seconds." },
+              { step: "1", title: "Get a quote", desc: "Tell us about your dog. Save up to 90% on vet bills." },
               { step: "2", title: "Customize", desc: "Pick your deductible, reimbursement rate & limits." },
               { step: "3", title: "Visit any vet", desc: "Go on adventures. See any licensed vet when needed." },
               { step: "4", title: "Get reimbursed", desc: "Submit claims in-app. Get paid in seconds to days." },

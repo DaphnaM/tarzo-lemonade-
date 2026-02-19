@@ -87,7 +87,7 @@ export default function MobilePage() {
             Get My Price →
           </CTAButton>
           <p className="text-center text-xs text-[var(--lemonade-gray)]">
-            Free quote · 90 seconds · Cancel anytime
+            Free quote · Save up to 90% · Cancel anytime
           </p>
         </div>
       </main>

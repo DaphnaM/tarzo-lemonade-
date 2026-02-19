@@ -104,7 +104,7 @@ export default function Home() {
     },
     {
       path: '/get-quote',
-      name: '90 Seconds to Coverage',
+      name: 'Save Up to 90% on Vet Bills',
       theme: 'Speed + Simplicity',
       description: 'Emphasizes quick quote flow and ease of use',
       icon: '⚡',

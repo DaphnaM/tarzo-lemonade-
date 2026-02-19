@@ -60,7 +60,7 @@ export default function ProtectPage() {
             </p>
             <CTAButton size="large">Protect My Pet Now</CTAButton>
             <p className="mt-4 text-sm text-[var(--lemonade-gray)]">
-              Quote takes 90 seconds • Coverage starts tomorrow
+              Save up to 90% on vet bills • Coverage starts tomorrow
             </p>
           </div>
           <div className="relative">

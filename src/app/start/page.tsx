@@ -55,7 +55,7 @@ export default function StartPage() {
             Pet insurance made for <span className="text-[var(--lemonade-pink)]">your pet</span>
           </h1>
           <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-2xl mx-auto">
-            Every pet is unique. Get a personalized quote based on your dog or cat&apos;s age, breed, and where you live. Takes about 90 seconds.
+            Every pet is unique. Get a personalized quote based on your dog or cat&apos;s age, breed, and where you live. Save up to 90% on vet bills.
           </p>
           <DualCTAButtons
             dogLabel="🐶 Get My Dog Quote"

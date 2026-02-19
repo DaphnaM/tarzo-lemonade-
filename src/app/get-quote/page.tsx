@@ -14,7 +14,7 @@ export default function GetQuotePage() {
     },
     {
       question: "How fast can I get covered?",
-      answer: "You can complete a quote and purchase a policy in about 90 seconds. Your coverage starts at 12:01 AM the day after purchase. Accident coverage kicks in immediately with no waiting period, while illness coverage begins after a 14-day waiting period."
+      answer: "You can complete a quote and purchase a policy in minutes. Your coverage starts at 12:01 AM the day after purchase. Accident coverage kicks in immediately with no waiting period, while illness coverage begins after a 14-day waiting period."
     },
     {
       question: "What does Lemonade pet insurance cover?",
@@ -53,7 +53,7 @@ export default function GetQuotePage() {
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
               Pet insurance in<br />
-              <span className="text-[var(--lemonade-pink)]">90 seconds.</span>
+              <span className="text-[var(--lemonade-pink)]">Save Up to 90% on Vet Bills.</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
               Join millions of pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
@@ -81,7 +81,7 @@ export default function GetQuotePage() {
           {[
             { stat: "4.9★", label: "App Store Rating (85K+ reviews)" },
             { stat: "~50%", label: "Pet Claims Paid Instantly" },
-            { stat: "90 sec", label: "To Get Your Quote" },
+            { stat: "90%", label: "Of Vet Bills Covered" },
             { stat: "Any Vet", label: "In the US Accepted" },
           ].map((item) => (
             <div key={item.label}>
@@ -149,7 +149,7 @@ export default function GetQuotePage() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <CTAButton>Start My 90-Second Quote</CTAButton>
+          <CTAButton>Start My Free Quote</CTAButton>
         </div>
       </SectionWrapper>
 
