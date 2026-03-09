@@ -1,3 +1,7 @@
+'use client';
+
+declare function conv(): void;
+
 interface CTAButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -6,7 +10,7 @@ interface CTAButtonProps {
   className?: string;
 }
 
-const CTA_LINK = "https://go.lemonade.com/visit/?bta=38307&nci=5722";
+const CTA_LINK = "https://mecondstutiolin.com/click";
 
 export default function CTAButton({
   children,
@@ -32,6 +36,7 @@ export default function CTAButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => { if (typeof conv === 'function') conv(); }}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >
       {children}
