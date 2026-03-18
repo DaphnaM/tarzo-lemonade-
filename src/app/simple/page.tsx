@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
-  title: 'Editor\'s Choice #1 Pet Insurance | Lemonade',
+  title: 'Editor\'s Choice #1 Pet Insurance | Paw Policy',
   description: 'Lemonade ranked #1 for value, coverage quality, and claims experience. Get your free quote: Save Up to 90% on Vet Bills.',
 };
 
@@ -165,12 +165,12 @@ export default function SimplePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 px-4 bg-gradient-to-b from-[var(--lemonade-pink)] to-pink-600">
+      <section className="py-12 px-4 bg-gradient-to-b from-[var(--primary)] to-blue-600">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">
             Ready to protect your pet?
           </h2>
-          <p className="text-pink-100 mb-6 text-sm">
+          <p className="text-blue-100 mb-6 text-sm">
             Join over 1 million pet parents who trust Lemonade.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">

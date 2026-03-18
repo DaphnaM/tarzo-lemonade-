@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, TrustStrip, FAQAccordion, TestimonialCard, SectionWrapper } from '@/components/shared';
 
 export const metadata = {
-  title: 'Pet Insurance: Save Up to 90% on Vet Bills | Lemonade',
+  title: 'Pet Insurance: Save Up to 90% on Vet Bills | Paw Policy',
   description: 'Protect your dog or cat today — customize your plan in minutes. No phone calls. Cancel anytime.',
 };
 
@@ -45,15 +45,15 @@ export default function GetQuotePage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-pink-50 to-white overflow-hidden">
+      <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
-            <span className="inline-block px-4 py-1 bg-pink-100 text-[var(--lemonade-pink)] rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1 bg-blue-100 text-[var(--primary)] rounded-full text-sm font-medium mb-6">
               #1 Rated Pet Insurance App
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
               Pet insurance in<br />
-              <span className="text-[var(--lemonade-pink)]">Save Up to 90% on Vet Bills.</span>
+              <span className="text-[var(--primary)]">Save Up to 90% on Vet Bills.</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
               Join millions of pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
@@ -112,7 +112,7 @@ export default function GetQuotePage() {
             <div key={item.procedure} className="bg-red-50 border border-red-100 rounded-xl p-6 text-center">
               <span className="text-3xl mb-3 block">{item.icon}</span>
               <h3 className="font-bold text-[var(--lemonade-dark)] mb-1">{item.procedure}</h3>
-              <p className="text-[var(--lemonade-pink)] font-bold text-lg">{item.cost}</p>
+              <p className="text-[var(--primary)] font-bold text-lg">{item.cost}</p>
             </div>
           ))}
         </div>
@@ -140,7 +140,7 @@ export default function GetQuotePage() {
             { step: "4", title: "Get reimbursed fast", desc: "Submit claims in the app. Many are paid instantly." },
           ].map((item) => (
             <div key={item.step} className="text-center bg-white rounded-xl p-6 shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 {item.step}
               </div>
               <h3 className="font-bold text-[var(--lemonade-dark)] mb-2">{item.title}</h3>
@@ -177,7 +177,7 @@ export default function GetQuotePage() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 p-4 bg-pink-50 rounded-lg">
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
               <p className="text-sm text-[var(--lemonade-dark)]">
                 <span className="font-bold">Optional add-ons:</span> Vet visit fees, dental illness, physical therapy, behavioral conditions, end-of-life care — starting at $1.89/month
               </p>
@@ -227,16 +227,16 @@ export default function GetQuotePage() {
       </SectionWrapper>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-20 px-6 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             Your pet deserves the best care.
           </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Don&apos;t wait until an emergency. Get peace of mind: Save Up to 90% on Vet Bills — it&apos;s free to see your price.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote Now</CTAButton>
-          <p className="mt-4 text-sm text-pink-200">
+          <p className="mt-4 text-sm text-blue-200">
             No commitment • See your price instantly • Cancel anytime
           </p>
         </div>

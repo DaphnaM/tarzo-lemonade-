@@ -3,7 +3,7 @@ import { Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/sh
 import { DualCTAButtons } from '@/components/specific';
 
 export const metadata = {
-  title: 'Pet Insurance Made for Your Pet | Lemonade',
+  title: 'Pet Insurance Made for Your Pet | Paw Policy',
   description: 'Get a personalized quote based on your dog or cat. Coverage tailored to their age, breed, and needs.',
 };
 
@@ -52,7 +52,7 @@ export default function StartPage() {
             🎯 Personalized coverage for YOUR pet
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
-            Pet insurance made for <span className="text-[var(--lemonade-pink)]">your pet</span>
+            Pet insurance made for <span className="text-[var(--primary)]">your pet</span>
           </h1>
           <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-2xl mx-auto">
             Every pet is unique. Get a personalized quote based on your dog or cat&apos;s age, breed, and where you live. Save up to 90% on vet bills.
@@ -210,7 +210,7 @@ export default function StartPage() {
             { step: "4", title: "You're covered!", desc: "Accident coverage starts immediately. Use any licensed vet." },
           ].map((item) => (
             <div key={item.step} className="text-center bg-purple-50 rounded-xl p-6">
-              <div className="w-14 h-14 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 {item.step}
               </div>
               <h3 className="font-bold text-[var(--lemonade-dark)] mb-2">{item.title}</h3>
@@ -235,15 +235,15 @@ export default function StartPage() {
           </p>
           <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="text-2xl font-bold text-[var(--lemonade-pink)]">5%</p>
+              <p className="text-2xl font-bold text-[var(--primary)]">5%</p>
               <p className="text-xs text-[var(--lemonade-gray)]">Multi-pet discount</p>
             </div>
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="text-2xl font-bold text-[var(--lemonade-pink)]">10%</p>
+              <p className="text-2xl font-bold text-[var(--primary)]">10%</p>
               <p className="text-xs text-[var(--lemonade-gray)]">Bundle discount</p>
             </div>
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="text-2xl font-bold text-[var(--lemonade-pink)]">5%</p>
+              <p className="text-2xl font-bold text-[var(--primary)]">5%</p>
               <p className="text-xs text-[var(--lemonade-gray)]">Annual pay discount</p>
             </div>
           </div>
@@ -263,19 +263,19 @@ export default function StartPage() {
       </SectionWrapper>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-20 px-6 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             Get a quote tailored to your pet
           </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Whether you have a playful puppy or a senior cat, Lemonade has coverage designed for them. See your personalized price: Save Up to 90% on Vet Bills.
           </p>
           <DualCTAButtons
             dogLabel="🐶 Dog Quote"
             catLabel="🐱 Cat Quote"
           />
-          <p className="mt-6 text-sm text-pink-200">
+          <p className="mt-6 text-sm text-blue-200">
             Dogs avg ~$35/mo • Cats avg ~$20/mo • Cancel anytime
           </p>
         </div>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion, TrustStrip } from '@/components/shared';
 
 export const metadata = {
-  title: 'Pet Insurance for Adventurous Dogs | Lemonade',
+  title: 'Pet Insurance for Adventurous Dogs | Paw Policy',
   description: 'Your adventure buddy deserves protection. Cover accidents, injuries, and illnesses from $10/mo.',
 };
 
@@ -57,7 +57,7 @@ export default function AdventureVideoPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--lemonade-dark)] mb-4 leading-tight">
               They catch waves, not breaks.<br />
-              <span className="text-[var(--lemonade-pink)]">Their insurance should keep up.</span>
+              <span className="text-[var(--primary)]">Their insurance should keep up.</span>
             </h1>
             <p className="text-lg text-[var(--lemonade-gray)] mb-6 max-w-xl mx-auto">
               Surfing, swimming, beach runs, outdoor adventures—your fearless pup faces more risks than a couch potato. Make sure they&apos;re covered.
@@ -107,7 +107,7 @@ export default function AdventureVideoPage() {
               <div key={i} className="bg-red-50 border border-red-100 rounded-xl p-5 text-center">
                 <span className="text-3xl block mb-2">{item.icon}</span>
                 <h3 className="font-bold text-[var(--lemonade-dark)]">{item.injury}</h3>
-                <p className="text-[var(--lemonade-pink)] font-bold text-lg">{item.cost}</p>
+                <p className="text-[var(--primary)] font-bold text-lg">{item.cost}</p>
                 <p className="text-xs text-[var(--lemonade-gray)] mt-1">{item.desc}</p>
               </div>
             ))}
@@ -194,7 +194,7 @@ export default function AdventureVideoPage() {
             </div>
           </div>
 
-          <div className="mt-8 bg-pink-100 border border-pink-200 rounded-xl p-4 text-center max-w-md mx-auto">
+          <div className="mt-8 bg-orange-50 border border-orange-200 rounded-xl p-4 text-center max-w-md mx-auto">
             <p className="font-semibold text-[var(--lemonade-dark)] text-sm">🎁 Optional wellness add-on available</p>
             <p className="text-[var(--lemonade-gray)] text-xs">Vaccinations, flea/tick prevention, annual checkups & more</p>
           </div>
@@ -216,7 +216,7 @@ export default function AdventureVideoPage() {
               { step: "4", title: "Get reimbursed", desc: "Submit claims in-app. Get paid in seconds to days." },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                <div className="w-12 h-12 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">
                   {item.step}
                 </div>
                 <h3 className="font-bold text-[var(--lemonade-dark)] mb-1">{item.title}</h3>
@@ -287,12 +287,12 @@ export default function AdventureVideoPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-16 px-6 bg-[var(--primary)]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">
             They&apos;re always ready for the next adventure.
           </h2>
-          <p className="text-pink-100 mb-8 text-lg">
+          <p className="text-blue-100 mb-8 text-lg">
             Make sure you&apos;re ready too. Get covered: Save Up to 90% on Vet Bills.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">

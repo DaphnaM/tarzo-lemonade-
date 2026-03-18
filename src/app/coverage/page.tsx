@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, ProofStrip, FAQAccordion, TestimonialCard, SectionWrapper } from '@/components/shared';
 
 export const metadata = {
-  title: 'Pet Insurance You Can Trust | Lemonade',
+  title: 'Pet Insurance You Can Trust | Paw Policy',
   description: 'Clear coverage. Easy claims. Real peace of mind for pet parents. Rated 4.9 stars by 85,000+ customers.',
 };
 
@@ -52,7 +52,7 @@ export default function CoveragePage() {
               ⭐ 4.9 stars from 85,000+ reviews
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
-              Pet insurance you can <span className="text-[var(--lemonade-pink)]">actually trust</span>
+              Pet insurance you can <span className="text-[var(--primary)]">actually trust</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
               No confusing fine print. No claim games. Just clear coverage, fast payouts, and real humans when you need them.
@@ -217,7 +217,7 @@ export default function CoveragePage() {
             This isn&apos;t just feel-good marketing — it removes the financial incentive to deny claims. When Lemonade pays your claim, it doesn&apos;t hurt their bottom line.
           </p>
           <div className="bg-white rounded-xl p-6 shadow-sm inline-block">
-            <p className="text-4xl font-extrabold text-[var(--lemonade-pink)]">$10M+</p>
+            <p className="text-4xl font-extrabold text-[var(--primary)]">$10M+</p>
             <p className="text-[var(--lemonade-gray)]">donated to nonprofits through Giveback</p>
           </div>
         </div>
@@ -238,16 +238,16 @@ export default function CoveragePage() {
       </SectionWrapper>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-20 px-6 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             Get peace of mind: Save Up to 90% on Vet Bills
           </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join the millions of pet parents who trust Lemonade to protect their furry family members. See your price instantly — no commitment required.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote</CTAButton>
-          <p className="mt-4 text-sm text-pink-200">
+          <p className="mt-4 text-sm text-blue-200">
             Rated 4.9 stars • 85,000+ reviews • Cancel anytime
           </p>
         </div>

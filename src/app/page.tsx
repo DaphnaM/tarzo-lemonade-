@@ -90,8 +90,8 @@ export default function Home() {
       theme: 'Active Pets',
       description: 'GIF hero for adventurous pet parents',
       icon: '🐕',
-      gradient: 'from-rose-500 to-pink-500',
-      bg: 'bg-rose-50 hover:bg-rose-100',
+      gradient: 'from-blue-500 to-cyan-500',
+      bg: 'bg-blue-50 hover:bg-blue-100',
     },
     {
       path: '/compare',
@@ -108,8 +108,8 @@ export default function Home() {
       theme: 'Speed + Simplicity',
       description: 'Emphasizes quick quote flow and ease of use',
       icon: '⚡',
-      gradient: 'from-pink-500 to-rose-500',
-      bg: 'bg-pink-50 hover:bg-pink-100',
+      gradient: 'from-blue-500 to-blue-600',
+      bg: 'bg-blue-50 hover:bg-blue-100',
     },
   ];
 
@@ -130,8 +130,8 @@ export default function Home() {
               />
             </div>
             <span className="text-slate-500 text-2xl animate-fade-in" style={{ animationDelay: '150ms' }}>×</span>
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <span className="font-script text-3xl text-white">L</span>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="w-12 h-12 rounded-lg" />
             </div>
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 md:mb-4 animate-fade-in-up" style={{ animationDelay: '200ms' }}>

@@ -2,95 +2,115 @@ import Image from 'next/image';
 import { CTAButton } from '@/components/shared';
 
 export const metadata = {
-  title: 'Get Pet Insurance | Lemonade',
-  description: 'Protect your pet with Lemonade. Fast claims, any vet, plans from $10/mo.',
+  title: 'Get Pet Insurance | Paw Policy',
+  description: 'Protect your pet with affordable pet insurance. Fast claims, any vet, plans from $10/mo.',
 };
 
 export default function MobilePage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* App-like Header */}
-      <header className="flex items-center justify-center py-4 border-b border-gray-100">
-        <div className="flex items-center gap-1">
-          <span className="font-script text-2xl text-[var(--lemonade-pink)]">Lemonade</span>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col min-h-[90vh]">
+        {/* App-like Header */}
+        <header className="flex items-center justify-center gap-2 py-3 border-b border-gray-100">
+          <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-8 w-auto rounded-lg" />
+          <span className="text-lg font-bold text-[var(--lemonade-dark)]">Paw Policy</span>
+        </header>
 
-      {/* Main Content - Fits viewport */}
-      <main className="flex-1 flex flex-col px-6 py-6">
-        {/* Hero Image */}
-        <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-6">
-          <Image
-            src="/images/happy-dog.jpg"
-            alt="Happy dog"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute top-3 left-3">
-            <span className="inline-flex items-center gap-1 bg-[#f5c518] text-[#1a1a1a] px-3 py-1 rounded-full font-bold text-xs">
-              🏆 #1 Rated
-            </span>
+        {/* Main Content */}
+        <main className="flex-1 flex flex-col px-5 py-5">
+          {/* Hero Image */}
+          <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-5">
+            <Image
+              src="/images/happy-dog.jpg"
+              alt="Happy dog"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute top-3 left-3">
+              <span className="inline-flex items-center gap-1 bg-[#f5c518] text-[#1a1a1a] px-3 py-1 rounded-full font-bold text-xs shadow-md">
+                🏆 #1 Rated
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Simple Value Prop */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl font-extrabold text-[var(--lemonade-dark)] mb-2">
-            Pet insurance that actually pays
-          </h1>
-          <p className="text-[var(--lemonade-gray)] text-sm">
-            Cover your furry friend for less than a coffee a day
-          </p>
-        </div>
+          {/* Value Prop */}
+          <div className="text-center mb-5">
+            <h1 className="text-xl font-extrabold text-[var(--lemonade-dark)] mb-1">
+              Pet insurance that actually pays
+            </h1>
+            <p className="text-[var(--lemonade-gray)] text-sm">
+              Cover your furry friend for less than a coffee a day
+            </p>
+          </div>
 
-        {/* Quick Stats */}
-        <div className="flex justify-between mb-6 px-2">
-          <div className="text-center">
-            <div className="text-xl font-bold text-[var(--lemonade-pink)]">$10</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">From/mo</div>
+          {/* Quick Stats */}
+          <div className="grid grid-cols-4 gap-2 mb-5 bg-gray-50 rounded-xl p-3">
+            <div className="text-center">
+              <div className="text-lg font-bold text-[var(--primary)]">$10</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">From/mo</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg font-bold text-[var(--primary)]">4.9★</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">App Store</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg font-bold text-[var(--primary)]">~50%</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">Instant claims</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg font-bold text-[var(--primary)]">Any</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">Vet in US</div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-xl font-bold text-[var(--lemonade-pink)]">4.9★</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">App Store</div>
-          </div>
-          <div className="text-center">
-            <div className="text-xl font-bold text-[var(--lemonade-pink)]">3 sec</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">Claims</div>
-          </div>
-          <div className="text-center">
-            <div className="text-xl font-bold text-[var(--lemonade-pink)]">Any</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">Vet</div>
-          </div>
-        </div>
 
-        {/* Cost Comparison */}
-        <div className="flex gap-3 mb-6">
-          <div className="flex-1 bg-red-50 border border-red-200 rounded-xl p-3 text-center">
-            <div className="text-xs text-red-600 mb-1">Without insurance</div>
-            <div className="text-xl font-bold text-red-600">$3,000+</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">Avg. surgery</div>
+          {/* Cost Comparison */}
+          <div className="flex gap-3 mb-5">
+            <div className="flex-1 bg-red-50 border border-red-200 rounded-xl p-3 text-center">
+              <div className="text-[10px] text-red-600 font-medium mb-1">Without insurance</div>
+              <div className="text-xl font-extrabold text-red-600">$3,000+</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">Avg. surgery</div>
+            </div>
+            <div className="flex-1 bg-green-50 border border-green-200 rounded-xl p-3 text-center">
+              <div className="text-[10px] text-green-600 font-medium mb-1">With insurance</div>
+              <div className="text-xl font-extrabold text-green-600">$10/mo</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">Starting at</div>
+            </div>
           </div>
-          <div className="flex-1 bg-green-50 border border-green-200 rounded-xl p-3 text-center">
-            <div className="text-xs text-green-600 mb-1">With Lemonade</div>
-            <div className="text-xl font-bold text-green-600">$10/mo</div>
-            <div className="text-xs text-[var(--lemonade-gray)]">Starting at</div>
+
+          {/* Key benefits */}
+          <div className="space-y-2 mb-5">
+            {[
+              'Accidents & illness coverage',
+              'Any licensed vet in the U.S.',
+              '70-90% of vet bills reimbursed',
+              'Cancel anytime, no fees',
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                <span className="text-[var(--lemonade-gray)] text-sm">{item}</span>
+              </div>
+            ))}
           </div>
-        </div>
 
-        {/* Spacer */}
-        <div className="flex-1" />
+          {/* Spacer */}
+          <div className="flex-1 min-h-4" />
 
-        {/* Fixed Bottom CTA */}
-        <div className="space-y-3">
-          <CTAButton size="large" className="w-full py-4 text-lg">
-            Get My Price →
-          </CTAButton>
-          <p className="text-center text-xs text-[var(--lemonade-gray)]">
-            Free quote · Save up to 90% · Cancel anytime
-          </p>
-        </div>
-      </main>
+          {/* Bottom CTA */}
+          <div className="space-y-2">
+            <CTAButton size="large" className="w-full py-4 text-lg">
+              Get My Price →
+            </CTAButton>
+            <p className="text-center text-[10px] text-[var(--lemonade-gray)]">
+              Free quote · Save up to 90% · Cancel anytime
+            </p>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

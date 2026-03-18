@@ -10,11 +10,11 @@ export default function PlanTierCard({ name, description, highlight = false }: P
   return (
     <div className={`p-6 rounded-xl border-2 transition-all ${
       highlight
-        ? 'border-[var(--lemonade-pink)] bg-pink-50 shadow-md'
+        ? 'border-[var(--primary)] bg-blue-50 shadow-md'
         : 'border-gray-200 bg-white hover:border-gray-300'
     }`}>
       {highlight && (
-        <span className="inline-block mb-3 text-xs font-semibold text-[var(--lemonade-pink)] bg-white px-3 py-1 rounded-full">
+        <span className="inline-block mb-3 text-xs font-semibold text-[var(--primary)] bg-white px-3 py-1 rounded-full">
           Most Popular
         </span>
       )}

@@ -3,7 +3,7 @@ import { Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/sh
 import { CostCard } from '@/components/specific';
 
 export const metadata = {
-  title: 'Don\'t Wait for the Emergency | Lemonade Pet Insurance',
+  title: 'Don\'t Wait for the Emergency | Paw Policy',
   description: 'One emergency vet visit can cost more than a year of pet insurance. Be ready for the unexpected.',
 };
 
@@ -53,7 +53,7 @@ export default function ProtectPage() {
               ⚠️ 1 in 3 pets need emergency care each year
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
-              One emergency vet visit can cost more than <span className="text-[var(--lemonade-pink)]">a full year</span> of pet insurance.
+              One emergency vet visit can cost more than <span className="text-[var(--primary)]">a full year</span> of pet insurance.
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
               In 2024, 37% of pet owners went into debt from unexpected vet bills. Don&apos;t let a medical emergency become a financial one.
@@ -121,7 +121,7 @@ export default function ProtectPage() {
         </div>
         <div className="text-center mt-10 p-6 bg-green-50 rounded-xl max-w-2xl mx-auto">
           <p className="text-lg text-[var(--lemonade-dark)]">
-            <span className="font-bold">With Lemonade:</span> Get <span className="text-[var(--lemonade-pink)] font-bold">70-90%</span> of these costs covered.
+            <span className="font-bold">With Lemonade:</span> Get <span className="text-[var(--primary)] font-bold">70-90%</span> of these costs covered.
           </p>
           <p className="text-sm text-[var(--lemonade-gray)] mt-2">
             Average monthly premium: ~$35 for dogs, ~$20 for cats
@@ -246,7 +246,7 @@ export default function ProtectPage() {
             { step: "4", title: "Get reimbursed", desc: "Many claims paid instantly. Money to your bank" },
           ].map((item) => (
             <div key={item.step} className="text-center bg-white rounded-xl p-6 shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-[var(--lemonade-pink)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 {item.step}
               </div>
               <h3 className="font-bold text-[var(--lemonade-dark)] mb-2">{item.title}</h3>
@@ -271,16 +271,16 @@ export default function ProtectPage() {
       </SectionWrapper>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-20 px-6 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             Don&apos;t wait until after the first emergency.
           </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             The best time to get pet insurance is before you need it. Get covered: Save Up to 90% on Vet Bills — accident coverage starts tomorrow.
           </p>
           <CTAButton variant="secondary" size="large">Protect My Pet Now</CTAButton>
-          <p className="mt-4 text-sm text-pink-200">
+          <p className="mt-4 text-sm text-blue-200">
             Free quote • No commitment • Cancel anytime
           </p>
         </div>

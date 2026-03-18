@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pet Insurance | Lemonade",
+  title: "Pet Insurance | Paw Policy",
   description: "Protect your pet with affordable, customizable pet insurance. Get a quote in minutes.",
 };
 

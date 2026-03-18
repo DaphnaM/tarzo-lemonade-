@@ -3,7 +3,7 @@ import { Footer, CTAButton, FAQAccordion, SectionWrapper } from '@/components/sh
 import { ComparisonTable } from '@/components/specific';
 
 export const metadata = {
-  title: 'Affordable Pet Insurance Plans | Lemonade',
+  title: 'Affordable Pet Insurance Plans | Paw Policy',
   description: 'Big protection, small monthly cost. Plans starting around $10/month. Customize your coverage in minutes.',
 };
 
@@ -64,7 +64,7 @@ export default function PlansPage() {
               💰 Plans starting around $10/month
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
-              Affordable pet insurance that <span className="text-[var(--lemonade-pink)]">fits your budget</span>
+              Affordable pet insurance that <span className="text-[var(--primary)]">fits your budget</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
               You choose your price. Adjust your deductible, reimbursement rate, and coverage limit to find the perfect balance of protection and affordability.
@@ -120,7 +120,7 @@ export default function PlansPage() {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$100</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Higher premium</span>
+                <span className="text-[var(--primary)] font-medium">Higher premium</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$250</span>
@@ -128,18 +128,18 @@ export default function PlansPage() {
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$500–$750</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Lower premium</span>
+                <span className="text-[var(--primary)] font-medium">Lower premium</span>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-6 border-2 border-[var(--lemonade-pink)] shadow-md">
+          <div className="bg-white rounded-xl p-6 border-2 border-[var(--primary)] shadow-md">
             <div className="text-3xl mb-4">💵</div>
             <h3 className="font-bold text-xl text-[var(--lemonade-dark)] mb-2">Reimbursement Rate</h3>
             <p className="text-[var(--lemonade-gray)] mb-4">% of eligible bills Lemonade pays</p>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">70%</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Budget-friendly</span>
+                <span className="text-[var(--primary)] font-medium">Budget-friendly</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">80%</span>
@@ -147,7 +147,7 @@ export default function PlansPage() {
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">90%</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Max coverage</span>
+                <span className="text-[var(--primary)] font-medium">Max coverage</span>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function PlansPage() {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$5,000</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Basic</span>
+                <span className="text-[var(--primary)] font-medium">Basic</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$20,000–$50,000</span>
@@ -166,7 +166,7 @@ export default function PlansPage() {
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[var(--lemonade-gray)]">$100,000</span>
-                <span className="text-[var(--lemonade-pink)] font-medium">Premium</span>
+                <span className="text-[var(--primary)] font-medium">Premium</span>
               </div>
             </div>
           </div>
@@ -199,12 +199,12 @@ export default function PlansPage() {
                 { name: "Behavioral conditions", price: "$2+/mo", desc: "Anxiety, aggression treatment" },
                 { name: "Preventive care", price: "$10+/mo", desc: "Vaccines, wellness exams, flea meds" },
               ].map((addon) => (
-                <div key={addon.name} className="flex items-start gap-3 p-3 bg-pink-50 rounded-lg">
-                  <span className="text-[var(--lemonade-pink)]">+</span>
+                <div key={addon.name} className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                  <span className="text-[var(--primary)]">+</span>
                   <div className="flex-1">
                     <div className="flex justify-between">
                       <span className="font-medium text-[var(--lemonade-dark)]">{addon.name}</span>
-                      <span className="text-sm text-[var(--lemonade-pink)] font-medium">{addon.price}</span>
+                      <span className="text-sm text-[var(--primary)] font-medium">{addon.price}</span>
                     </div>
                     <p className="text-xs text-[var(--lemonade-gray)]">{addon.desc}</p>
                   </div>
@@ -263,7 +263,7 @@ export default function PlansPage() {
               </div>
             </div>
           </div>
-          <div className="bg-[var(--lemonade-pink)] p-4 text-center">
+          <div className="bg-[var(--primary)] p-4 text-center">
             <p className="text-white font-bold">You save $2,450 on this single claim 💰</p>
           </div>
         </div>
@@ -284,16 +284,16 @@ export default function PlansPage() {
       </SectionWrapper>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-[var(--lemonade-pink)]">
+      <section className="py-20 px-6 bg-[var(--primary)]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             See your personalized price: Save Up to 90% on Vet Bills
           </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             No commitment, no credit card, no phone calls. Just enter your pet&apos;s info and see what you&apos;d pay.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote</CTAButton>
-          <p className="mt-4 text-sm text-pink-200">
+          <p className="mt-4 text-sm text-blue-200">
             Average: $35/mo for dogs • $20/mo for cats
           </p>
         </div>

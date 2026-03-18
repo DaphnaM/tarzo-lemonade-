@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
-  title: 'Protect Your Adventurous Pet | Lemonade',
+  title: 'Protect Your Adventurous Pet | Paw Policy',
   description: 'Pet insurance for pets who love adventure. Fast claims, any vet, plans from $10/mo.',
 };
 
@@ -67,8 +67,8 @@ export default function GifPage() {
             {/* Content */}
             <div className="px-5 pb-5 text-center">
               {/* Lemonade Logo */}
-              <h1 className="font-script text-4xl text-[var(--lemonade-pink)] mb-1">
-                Lemonade
+              <h1 className="text-3xl font-extrabold text-[var(--primary)] mb-1">
+                Paw Policy
               </h1>
 
               <h2 className="text-lg font-extrabold text-[var(--lemonade-dark)] mb-2">
@@ -170,12 +170,12 @@ export default function GifPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 px-4 bg-gradient-to-b from-[var(--lemonade-pink)] to-pink-600">
+      <section className="py-12 px-4 bg-gradient-to-b from-[var(--primary)] to-blue-600">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">
             Ready to protect your pet?
           </h2>
-          <p className="text-pink-100 mb-6 text-sm">
+          <p className="text-blue-100 mb-6 text-sm">
             Join over 1 million pet parents who trust Lemonade.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">

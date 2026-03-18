@@ -15,7 +15,7 @@ export default function DualCTAButtons({
         href={CTA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-[var(--lemonade-pink)] text-white hover:bg-[var(--lemonade-pink-hover)] hover:shadow-lg transition-all duration-200 text-center"
+        className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] hover:shadow-lg transition-all duration-200 text-center"
       >
         {dogLabel}
       </a>
@@ -23,7 +23,7 @@ export default function DualCTAButtons({
         href={CTA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-white text-[var(--lemonade-pink)] border-2 border-[var(--lemonade-pink)] hover:bg-pink-50 transition-all duration-200 text-center"
+        className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-white text-[var(--accent)] border-2 border-[var(--accent)] hover:bg-orange-50 transition-all duration-200 text-center"
       >
         {catLabel}
       </a>

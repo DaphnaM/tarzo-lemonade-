@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --lemonade-pink: #FF0083;
-  --lemonade-pink-hover: #E00075;
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --accent: #FB923C;
+  --accent-hover: #F97316;
   --lemonade-dark: #1A1A1A;
   --lemonade-gray: #6B7280;
   --lemonade-light-gray: #F5F5F5;
@@ -14,8 +15,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-lemonade-pink: var(--lemonade-pink);
-  --color-lemonade-pink-hover: var(--lemonade-pink-hover);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --color-lemonade-dark: var(--lemonade-dark);
   --color-lemonade-gray: var(--lemonade-gray);
   --color-lemonade-light-gray: var(--lemonade-light-gray);
@@ -50,11 +53,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a1a1a1;
-}
-
-/* Script font for Lemonade logo */
-.font-script {
-  font-family: 'Pacifico', cursive;
 }
 
 /* Subtle animations */

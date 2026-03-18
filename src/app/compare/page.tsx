@@ -1,80 +1,98 @@
-import Image from 'next/image';
-import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
+'use client';
 
-export const metadata = {
-  title: 'Top 5 Pet Insurance Companies 2026 | PawPolicy Research',
-  description: 'Our researchers compared pet insurance companies across coverage, pricing, and claims speed. See the winners.',
-};
+import Image from 'next/image';
+import { useState } from 'react';
+import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 const insurers = [
   {
     rank: 1,
     name: 'Lemonade',
     logoText: 'Lemonade',
-    logoStyle: 'font-script text-2xl',
-    logoImage: null, // Use text logo for Lemonade
+    logoStyle: 'font-bold text-3xl italic',
+    logoImage: null,
+    logoType: 'text' as const,
     brandColor: '#FF0083',
     score: 9.8,
     monthlyFrom: '$10',
     claimSpeed: 'Minutes (AI)',
     highlight: "Editor's Choice",
-    pros: ['~50% claims paid instantly', 'Modern app (4.9★)', 'Transparent pricing', 'Any licensed vet'],
+    tagline: 'Best budget pick with AI-powered claims',
+    description: 'Lemonade is the standout budget pick. Its AI-powered app handles claims in minutes for nearly half of submissions. The trade-off is that they keep prices down by leaving several commonly covered conditions off their base plan — dental, physical therapy, and behavioral conditions all require paid add-ons.',
+    detailPros: ['Cheapest overall starting price', '~50% of claims paid in minutes via AI', '4.9★ app (85k+ reviews)', 'Any licensed vet accepted'],
+    detailCons: ['Base plan has thin coverage', '14-year age limit for enrollment'],
     isWinner: true,
   },
   {
     rank: 2,
     name: 'Healthy Paws',
     logoText: 'Healthy Paws',
-    logoStyle: 'font-bold text-lg',
+    logoStyle: 'font-semibold text-xl',
     logoImage: '/images/healthy-paws-logo.png',
+    logoType: 'wide' as const,
     brandColor: '#2E7D32',
     score: 8.4,
     monthlyFrom: '$15',
     claimSpeed: '~2 days',
     highlight: 'Unlimited annual coverage',
-    pros: ['No annual payout limits', 'Fast claims processing', '70-90% reimbursement'],
+    tagline: 'Simple, reliable with no payout limits',
+    description: 'Healthy Paws is simple and reliable. It offers a single plan with no annual or lifetime payout limits, covering alternative therapies like acupuncture and chiropractic in the base plan. The main gap: there\'s no wellness plan option, and exam fees aren\'t covered.',
+    detailPros: ['Unlimited payouts — no annual or lifetime cap', '24/7 vet helpline included', '70-90% reimbursement options'],
+    detailCons: ['No wellness add-on available', 'No exam fee coverage'],
     isWinner: false,
   },
   {
     rank: 3,
     name: 'Embrace',
     logoText: 'Embrace',
-    logoStyle: 'font-bold text-lg',
+    logoStyle: 'font-semibold text-xl',
     logoImage: '/images/embrace-logo.jpg',
-    brandColor: '#E65100',
+    logoType: 'icon' as const,
+    brandColor: '#6A1B9A',
     score: 8.1,
     monthlyFrom: '$13',
     claimSpeed: '5-10 days',
     highlight: 'Wellness rewards',
-    pros: ['Diminishing deductible', 'Covers hip dysplasia at any age', 'Optional wellness add-on'],
+    tagline: 'Most comprehensive base coverage',
+    description: 'Embrace is the most comprehensive of the five. It covers dental illness as a standard feature — something most other insurers don\'t offer. It also has a unique diminishing deductible feature. It holds an A+ rating from the BBB, though premiums have been rising year-over-year for many policyholders.',
+    detailPros: ['Dental illness covered in base plan', 'Diminishing deductible saves money over time', 'A+ BBB rating'],
+    detailCons: ['Exam fees require add-on', 'Premiums tend to rise yearly'],
     isWinner: false,
   },
   {
     rank: 4,
     name: 'Pets Best',
     logoText: 'Pets Best',
-    logoStyle: 'font-bold text-lg',
+    logoStyle: 'font-semibold text-xl',
     logoImage: '/images/pets-best-logo.jpg',
+    logoType: 'square' as const,
     brandColor: '#1565C0',
     score: 7.9,
     monthlyFrom: '$12',
     claimSpeed: '3-7 days',
     highlight: 'No upper age limit',
-    pros: ['Direct vet pay option', 'Three coverage tiers', 'No enrollment age cap'],
+    tagline: 'Great middle ground with no age cap',
+    description: 'Pets Best hits a solid middle ground. It has no maximum enrollment age and covers routine procedures like spaying, microchipping, and teeth cleaning with the right plan. It also offers a direct vet pay option so you don\'t have to pay out of pocket first.',
+    detailPros: ['No breed restrictions or age limits', 'Direct vet pay option', 'Three coverage tiers to choose from'],
+    detailCons: ['F rating from BBB', 'Some reports of slow claims processing'],
     isWinner: false,
   },
   {
     rank: 5,
     name: 'Trupanion',
     logoText: 'Trupanion',
-    logoStyle: 'font-bold text-lg',
+    logoStyle: 'font-semibold text-xl',
     logoImage: '/images/trupanion-logo.png',
+    logoType: 'wide' as const,
     brandColor: '#7B1FA2',
     score: 7.6,
     monthlyFrom: '$25',
     claimSpeed: 'Instant (at vet)',
     highlight: 'Pay vet directly',
-    pros: ['90% reimbursement', 'Per-condition deductible', 'Unlimited coverage'],
+    tagline: 'Premium option with direct vet payment',
+    description: 'Trupanion is premium-priced but genuinely unique. It\'s the only provider that can pay veterinarians directly at checkout, often in seconds, meaning you may never have to pay out-of-pocket at the vet. It also never increases or cancels your coverage because of claims you submit.',
+    detailPros: ['Pays vet directly at checkout — no out-of-pocket', 'Unlimited coverage with no payout caps', 'No price hikes based on claims history'],
+    detailCons: ['Most expensive option (~$165/mo avg for dogs)', 'Fixed 90% reimbursement — no choice'],
     isWinner: false,
   },
 ];
@@ -101,6 +119,176 @@ const researchVariables = [
   'Multi-Pet Discounts',
   'Wellness Add-ons',
 ];
+
+function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
+  const [expanded, setExpanded] = useState(insurer.isWinner);
+
+  return (
+    <div
+      className={`relative rounded-2xl border-2 transition-all ${
+        insurer.isWinner
+          ? 'border-amber-400 bg-gradient-to-r from-amber-50 to-white shadow-xl scale-[1.02] z-10'
+          : 'bg-white hover:shadow-md'
+      }`}
+      style={{
+        borderColor: insurer.isWinner ? undefined : `${insurer.brandColor}30`
+      }}
+    >
+      {/* Winner Badge */}
+      {insurer.isWinner && (
+        <div className="absolute -top-4 left-8">
+          <span className="inline-flex items-center gap-1 bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
+            Our #1 Pick
+          </span>
+        </div>
+      )}
+
+      {/* Clickable header */}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full text-left p-8 pb-6 cursor-pointer"
+      >
+        <div className="flex items-center gap-5">
+          {/* Rank */}
+          <div
+            className={`w-16 h-16 rounded-full flex items-center justify-center font-extrabold text-2xl flex-shrink-0 ${
+              insurer.isWinner ? 'bg-amber-500 text-white' : 'text-white'
+            }`}
+            style={{
+              backgroundColor: insurer.isWinner ? undefined : insurer.brandColor
+            }}
+          >
+            {insurer.rank}
+          </div>
+
+          {/* Logo & Name */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-4">
+              {insurer.logoType === 'text' ? (
+                <span
+                  className="font-bold text-4xl italic"
+                  style={{ color: insurer.brandColor }}
+                >
+                  {insurer.logoText}
+                </span>
+              ) : insurer.logoType === 'icon' ? (
+                <>
+                  <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
+                    <Image
+                      src={insurer.logoImage!}
+                      alt={`${insurer.name} logo`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <span className="font-bold text-2xl text-[var(--lemonade-dark)]">{insurer.name}</span>
+                </>
+              ) : insurer.logoType === 'square' ? (
+                <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
+                  <Image
+                    src={insurer.logoImage!}
+                    alt={`${insurer.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="relative w-48 h-16 flex-shrink-0">
+                  <Image
+                    src={insurer.logoImage!}
+                    alt={`${insurer.name} logo`}
+                    fill
+                    className="object-contain object-left"
+                  />
+                </div>
+              )}
+            </div>
+            {/* Tagline - always visible */}
+            <p className="text-sm text-gray-500 mt-2">{insurer.tagline}</p>
+          </div>
+
+          {/* Score */}
+          <div className="text-right flex-shrink-0">
+            <div
+              className={`text-4xl font-extrabold ${insurer.isWinner ? 'text-amber-500' : ''}`}
+              style={{ color: insurer.isWinner ? undefined : insurer.brandColor }}
+            >
+              {insurer.score}
+            </div>
+            <div className="text-sm text-gray-500">Score</div>
+          </div>
+
+          {/* Chevron */}
+          <svg
+            className={`w-7 h-7 text-gray-400 flex-shrink-0 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+
+        {/* Quick stats - always visible */}
+        <div className="mt-4 flex items-center gap-6 text-base ml-20">
+          <span className="text-gray-600">
+            From <strong className="text-lg" style={{ color: insurer.brandColor }}>{insurer.monthlyFrom}</strong>/mo
+          </span>
+          <span className="text-gray-300">|</span>
+          <span className="text-gray-500">Claims: <strong>{insurer.claimSpeed}</strong></span>
+        </div>
+      </button>
+
+      {/* Expandable details */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          expanded ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-8 pb-8 pt-2">
+          <div className="border-t border-gray-200 pt-6">
+            {/* Description */}
+            <p className="text-base text-gray-600 leading-relaxed mb-6">
+              {insurer.description}
+            </p>
+
+            {/* Pros & Cons */}
+            <div className="grid grid-cols-2 gap-6 mb-6">
+              <div>
+                {insurer.detailPros.map((pro: string, i: number) => (
+                  <div key={i} className="flex items-start gap-3 mb-3">
+                    <svg className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-base text-gray-600">{pro}</span>
+                  </div>
+                ))}
+              </div>
+              <div>
+                {insurer.detailCons.map((con: string, i: number) => (
+                  <div key={i} className="flex items-start gap-3 mb-3">
+                    <svg className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-base text-gray-600">{con}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA for Lemonade only */}
+            {insurer.isWinner && (
+              <CTAButton size="large" className="w-full !bg-emerald-500 hover:!bg-emerald-600 !text-lg !py-4">
+                Get Lemonade Quote →
+              </CTAButton>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function ComparePage() {
   const faqItems = [
@@ -166,129 +354,11 @@ export default function ComparePage() {
       </section>
 
       {/* Rankings */}
-      <section className="py-12 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-4">
+      <section className="py-14 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
             {insurers.map((insurer) => (
-              <div
-                key={insurer.rank}
-                className={`relative rounded-2xl border-2 transition-all ${
-                  insurer.isWinner
-                    ? 'border-amber-400 bg-gradient-to-r from-amber-50 to-white shadow-xl scale-[1.02] z-10'
-                    : 'bg-white hover:shadow-md'
-                }`}
-                style={{
-                  borderColor: insurer.isWinner ? undefined : `${insurer.brandColor}30`
-                }}
-              >
-                {/* Winner Badge */}
-                {insurer.isWinner && (
-                  <div className="absolute -top-3 left-6">
-                    <span className="inline-flex items-center gap-1 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                      🏆 Our #1 Pick
-                    </span>
-                  </div>
-                )}
-
-                <div className="p-6">
-                  <div className="flex items-center gap-4">
-                    {/* Rank */}
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-xl ${
-                        insurer.isWinner ? 'bg-amber-500 text-white' : 'text-white'
-                      }`}
-                      style={{
-                        backgroundColor: insurer.isWinner ? undefined : insurer.brandColor
-                      }}
-                    >
-                      {insurer.rank}
-                    </div>
-
-                    {/* Logo & Name */}
-                    <div className="flex items-center gap-3 flex-1">
-                      {insurer.logoImage ? (
-                        <div className="relative w-24 h-8 flex-shrink-0">
-                          <Image
-                            src={insurer.logoImage}
-                            alt={`${insurer.name} logo`}
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-24 flex-shrink-0">
-                          <span
-                            className={insurer.logoStyle}
-                            style={{ color: insurer.brandColor }}
-                          >
-                            {insurer.logoText}
-                          </span>
-                        </div>
-                      )}
-                      <div>
-                        <span className="font-bold text-[var(--lemonade-dark)]">{insurer.name}</span>
-                        <div className="text-xs mt-0.5 text-gray-500">
-                          {insurer.highlight}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Score */}
-                    <div className="text-right">
-                      <div
-                        className={`text-2xl font-extrabold ${insurer.isWinner ? 'text-amber-500' : ''}`}
-                        style={{ color: insurer.isWinner ? undefined : insurer.brandColor }}
-                      >
-                        {insurer.score}
-                      </div>
-                      <div className="text-xs text-gray-500">Score</div>
-                    </div>
-                  </div>
-
-                  {/* Details - Only show for winner */}
-                  {insurer.isWinner && (
-                    <div className="mt-6 pt-6 border-t border-amber-200">
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-600">{insurer.monthlyFrom}</div>
-                          <div className="text-xs text-gray-500">From/month</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-600">{insurer.claimSpeed}</div>
-                          <div className="text-xs text-gray-500">Claims</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-600">Any</div>
-                          <div className="text-xs text-gray-500">Vet accepted</div>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {insurer.pros.map((pro, i) => (
-                          <span key={i} className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            {pro}
-                          </span>
-                        ))}
-                      </div>
-
-                      <CTAButton size="large" className="w-full !bg-emerald-500 hover:!bg-emerald-600">
-                        Get Lemonade Quote →
-                      </CTAButton>
-                    </div>
-                  )}
-
-                  {/* Minimal details for non-winners */}
-                  {!insurer.isWinner && (
-                    <div className="mt-4 flex items-center justify-between text-sm">
-                      <span className="text-gray-600">From <strong style={{ color: insurer.brandColor }}>{insurer.monthlyFrom}</strong>/mo</span>
-                      <span className="text-gray-500">Claims: {insurer.claimSpeed}</span>
-                    </div>
-                  )}
-                </div>
-              </div>
+              <InsurerCard key={insurer.rank} insurer={insurer} />
             ))}
           </div>
         </div>

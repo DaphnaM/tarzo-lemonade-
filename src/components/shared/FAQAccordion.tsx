@@ -30,7 +30,7 @@ export default function FAQAccordion({ items, showOfficialLink = true }: FAQAcco
               className="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors"
             >
               <span className="font-medium text-[var(--lemonade-dark)]">{item.question}</span>
-              <span className="text-[var(--lemonade-pink)] text-xl">
+              <span className="text-[var(--accent)] text-xl">
                 {openIndex === index ? '−' : '+'}
               </span>
             </button>
@@ -48,7 +48,7 @@ export default function FAQAccordion({ items, showOfficialLink = true }: FAQAcco
             href={OFFICIAL_FAQ_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--lemonade-pink)] hover:underline font-medium"
+            className="text-[var(--primary)] hover:underline font-medium"
           >
             View official Lemonade FAQ →
           </a>
