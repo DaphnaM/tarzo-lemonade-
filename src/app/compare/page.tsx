@@ -321,12 +321,12 @@ export default function ComparePage() {
       <header className="bg-[var(--lemonade-dark)] text-white py-4 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="relative w-8 h-8">
+            <div className="relative w-8 h-8 rounded-lg overflow-hidden">
               <Image
                 src="/images/paw-policy-logo.png"
                 alt="PawPolicy logo"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             <span className="font-bold">PawPolicy Research</span>
