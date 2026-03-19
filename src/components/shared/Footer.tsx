@@ -8,8 +8,8 @@ export default function Footer() {
             <span className="text-lg font-bold text-[var(--lemonade-dark)]">Paw Policy</span>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
-            <a href="https://www.lemonade.com/pet" className="hover:text-[var(--accent)] transition-colors">Pet Insurance</a>
-            <a href="https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/" className="hover:text-[var(--accent)] transition-colors">Pet FAQ</a>
+            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet Insurance</a>
+            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet FAQ</a>
             <a href="https://www.lemonade.com/terms" className="hover:text-[var(--accent)] transition-colors">Terms</a>
             <a href="https://www.lemonade.com/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy</a>
           </div>

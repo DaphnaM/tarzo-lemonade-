@@ -67,7 +67,7 @@ export default function SimplePage() {
             <div className="px-5 pb-5 text-center">
               {/* Company Name */}
               <h1 className="text-2xl font-extrabold text-[var(--lemonade-dark)] mb-1">
-                Lemonade Pet Insurance
+                <span className="italic text-[#FF0083]">Lemonade</span> Pet Insurance
               </h1>
 
               <h2 className="text-sm text-[var(--lemonade-gray)] mb-3">
@@ -106,7 +106,7 @@ export default function SimplePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why Lemonade?
+            Why <span className="italic text-[#FF0083]">Lemonade</span>?
           </h2>
           <p className="text-[var(--lemonade-gray)] text-center mb-8 text-sm">
             What makes them stand out from traditional pet insurers
@@ -171,7 +171,7 @@ export default function SimplePage() {
             Ready to protect your pet?
           </h2>
           <p className="text-blue-100 mb-6 text-sm">
-            Join over 1 million pet parents who trust Lemonade.
+            Join over 1 million pet parents who trust <span className="italic font-bold">Lemonade</span>.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">
             See Prices →

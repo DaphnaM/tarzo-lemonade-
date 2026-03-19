@@ -280,7 +280,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
             {/* CTA for Lemonade only */}
             {insurer.isWinner && (
               <CTAButton size="large" className="w-full !bg-emerald-500 hover:!bg-emerald-600 !text-lg !py-4">
-                Get Lemonade Quote →
+                Get <span className="italic">Lemonade</span> Quote →
               </CTAButton>
             )}
           </div>
@@ -321,7 +321,14 @@ export default function ComparePage() {
       <header className="bg-[var(--lemonade-dark)] text-white py-4 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🔬</span>
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/paw-policy-logo.png"
+                alt="PawPolicy logo"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span className="font-bold">PawPolicy Research</span>
           </div>
           <span className="text-sm text-gray-400">Pet Insurance Analysis</span>
@@ -389,7 +396,7 @@ export default function ComparePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why Lemonade Stands Out
+            Why <span className="italic text-[#FF0083]">Lemonade</span> Stands Out
           </h2>
           <p className="text-center text-[var(--lemonade-gray)] mb-8">
             What sets them apart from traditional insurers
@@ -429,7 +436,7 @@ export default function ComparePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">See If Lemonade Is Right For You →</CTAButton>
+            <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">See If <span className="italic">Lemonade</span> Is Right For You →</CTAButton>
           </div>
         </div>
       </section>
@@ -458,7 +465,7 @@ export default function ComparePage() {
             Get a free quote: Save Up to 90% on Vet Bills
           </p>
           <CTAButton size="large" className="!bg-emerald-500 hover:!bg-emerald-600">
-            Get Your Free Lemonade Quote →
+            Get Your Free <span className="italic">Lemonade</span> Quote →
           </CTAButton>
         </div>
       </section>
