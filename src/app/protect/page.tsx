@@ -87,7 +87,7 @@ export default function ProtectPage() {
           {[
             { stat: "37%", label: "of pet owners went into debt from vet bills in 2024" },
             { stat: "$800–$1,500", label: "average cost of an emergency vet visit" },
-            { stat: "6.1%", label: "increase in vet costs in the past year alone" },
+            { stat: "70-90%", label: "of vet bills covered with Lemonade" },
           ].map((item) => (
             <div key={item.label}>
               <div className="text-3xl md:text-4xl font-extrabold text-white">{item.stat}</div>

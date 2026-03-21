@@ -193,11 +193,11 @@ export default function PlansPage() {
             <p className="text-[var(--lemonade-gray)] mb-4">Boost your coverage for a few extra dollars/month:</p>
             <div className="space-y-4">
               {[
-                { name: "Vet visit fees", price: "$1.89+/mo", desc: "Covers exam fees (usually $50-$100)" },
-                { name: "Dental illness", price: "$4+/mo", desc: "Extractions, root canals, gum disease" },
-                { name: "Physical therapy", price: "$3+/mo", desc: "Rehab, hydrotherapy, acupuncture" },
-                { name: "Behavioral conditions", price: "$2+/mo", desc: "Anxiety, aggression treatment" },
-                { name: "Preventive care", price: "$10+/mo", desc: "Vaccines, wellness exams, flea meds" },
+                { name: "Vet visit fees", price: "Add-on", desc: "Covers exam fees (usually $50-$100)" },
+                { name: "Dental illness", price: "Add-on", desc: "Extractions, root canals, gum disease" },
+                { name: "Physical therapy", price: "Add-on", desc: "Rehab, hydrotherapy, acupuncture" },
+                { name: "Behavioral conditions", price: "Add-on", desc: "Anxiety, aggression treatment" },
+                { name: "Preventive care", price: "Add-on", desc: "Vaccines, wellness exams, flea meds" },
               ].map((addon) => (
                 <div key={addon.name} className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-[var(--primary)]">+</span>

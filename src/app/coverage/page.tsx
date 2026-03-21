@@ -34,7 +34,7 @@ export default function CoveragePage() {
     },
     {
       question: "How long has Lemonade been around?",
-      answer: "Lemonade launched in 2016 and started offering pet insurance in 2020. They now protect millions of pets across the US. The company is publicly traded (NYSE: LMND) and is headquartered in New York City."
+      answer: "Lemonade launched in 2016 and started offering pet insurance in 2020. The company is publicly traded (NYSE: LMND) and is headquartered in New York City."
     },
     {
       question: "What happens when my policy renews?",
@@ -64,7 +64,7 @@ export default function CoveragePage() {
             <div className="mt-8">
               <ProofStrip
                 rating="⭐️⭐️⭐️⭐️⭐️"
-                highlights={["85,000+ App Store reviews", "Millions of pets protected", "Public benefit corp"]}
+                highlights={["85,000+ App Store reviews", "4.9★ rated", "Public benefit corp"]}
               />
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function CoveragePage() {
           <TestimonialCard quote="Love that I can customize my deductible and reimbursement percentage. Made it easy to find a plan that fits my budget." />
         </div>
         <div className="text-center mt-10">
-          <CTAButton>Join 2 Million+ Happy Pet Parents</CTAButton>
+          <CTAButton>Get My Free Quote</CTAButton>
         </div>
       </SectionWrapper>
 
@@ -244,7 +244,7 @@ export default function CoveragePage() {
             Get peace of mind: Save Up to 90% on Vet Bills
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join the millions of pet parents who trust Lemonade to protect their furry family members. See your price instantly — no commitment required.
+            Trusted by pet parents everywhere. See your price instantly — no commitment required.
           </p>
           <CTAButton variant="secondary" size="large">Get My Free Quote</CTAButton>
           <p className="mt-4 text-sm text-blue-200">

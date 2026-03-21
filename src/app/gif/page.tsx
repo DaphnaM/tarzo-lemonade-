@@ -22,7 +22,7 @@ export default function GifPage() {
     },
     {
       question: "How fast are claims paid?",
-      answer: "Lemonade uses AI to process many claims instantly. About a third of claims are paid within seconds. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
+      answer: "Lemonade uses AI to process claims fast — about half are paid in minutes. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
     },
     {
       question: "Can I use any vet?",
@@ -46,7 +46,7 @@ export default function GifPage() {
             <div className="flex justify-center pt-4 pb-2">
               <div className="inline-flex items-center gap-2 bg-[#f5c518] text-[#1a1a1a] px-4 py-1.5 rounded-full font-bold text-xs">
                 <span>🏆</span>
-                <span>Editor&apos;s Choice 2026 · #1 Pet Insurance</span>
+                <span>Editor&apos;s Choice 2026 · Pet Insurance</span>
               </div>
             </div>
 
@@ -83,9 +83,9 @@ export default function GifPage() {
               <div className="space-y-2 mb-4 text-left">
                 {[
                   'Accident & illness coverage from $10/mo',
-                  'Fast, app-based claims paid in minutes',
+                  '~50% of claims paid in minutes via AI',
                   'Any vet, anywhere in the U.S.',
-                  '4.9★ rated by 1M+ pet parents',
+                  '4.9★ App Store rating (85K+ reviews)',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
@@ -111,7 +111,7 @@ export default function GifPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why Lemonade?
+            Why <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={120} height={28} className="inline-block align-middle" />?
           </h2>
           <p className="text-[var(--lemonade-gray)] text-center mb-8 text-sm">
             What makes them stand out from traditional pet insurers
@@ -176,7 +176,7 @@ export default function GifPage() {
             Ready to protect your pet?
           </h2>
           <p className="text-blue-100 mb-6 text-sm">
-            Join over 1 million pet parents who trust Lemonade.
+            Trusted by pet parents everywhere. Rated 4.9★ with 85,000+ reviews.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">
             See Prices →
