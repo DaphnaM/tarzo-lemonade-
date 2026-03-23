@@ -10,8 +10,8 @@ const insurers = [
     name: 'Lemonade',
     logoText: 'Lemonade',
     logoStyle: 'font-bold text-3xl italic',
-    logoImage: null,
-    logoType: 'text' as const,
+    logoImage: '/images/lemonade-logo.webp',
+    logoType: 'wide' as const,
     brandColor: '#FF0083',
     score: 9.8,
     monthlyFrom: '$10',
@@ -127,7 +127,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
     <div
       className={`relative rounded-2xl border-2 transition-all ${
         insurer.isWinner
-          ? 'border-amber-400 bg-gradient-to-r from-amber-50 to-white shadow-xl scale-[1.02] z-10'
+          ? 'border-amber-400 bg-white shadow-xl scale-[1.02] z-10'
           : 'bg-white hover:shadow-md'
       }`}
       style={{
@@ -164,14 +164,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
           {/* Logo & Name */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-4">
-              {insurer.logoType === 'text' ? (
-                <span
-                  className="font-bold text-4xl italic"
-                  style={{ color: insurer.brandColor }}
-                >
-                  {insurer.logoText}
-                </span>
-              ) : insurer.logoType === 'icon' ? (
+              {insurer.logoType === 'icon' ? (
                 <>
                   <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
                     <Image
@@ -193,7 +186,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
                   />
                 </div>
               ) : (
-                <div className="relative w-48 h-16 flex-shrink-0">
+                <div className="relative w-48 h-16 flex-shrink-0 bg-white rounded-lg">
                   <Image
                     src={insurer.logoImage!}
                     alt={`${insurer.name} logo`}
