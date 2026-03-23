@@ -29,13 +29,17 @@ export default function MobilePage() {
             />
             <div className="absolute top-3 left-3">
               <span className="inline-flex items-center gap-1 bg-[#f5c518] text-[#1a1a1a] px-3 py-1 rounded-full font-bold text-xs shadow-md">
-                🏆 #1 Rated
+                🏆 Top-Rated
               </span>
             </div>
           </div>
 
           {/* Value Prop */}
           <div className="text-center mb-5">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={130} height={30} />
+              <span className="text-lg font-extrabold text-[var(--lemonade-dark)]">Pet Insurance</span>
+            </div>
             <h1 className="text-xl font-extrabold text-[var(--lemonade-dark)] mb-1">
               Pet insurance that actually pays
             </h1>

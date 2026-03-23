@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Footer, CTAButton, FAQAccordion } from '@/components/shared';
 
 export const metadata = {
-  title: 'Editor\'s Choice #1 Pet Insurance | Paw Policy',
+  title: 'Editor\'s Choice Pet Insurance 2026 | Paw Policy',
   description: 'Lemonade ranked #1 for value, coverage quality, and claims experience. Get your free quote: Save Up to 90% on Vet Bills.',
 };
 
@@ -22,7 +22,7 @@ export default function SimplePage() {
     },
     {
       question: "How fast are claims paid?",
-      answer: "Lemonade uses AI to process many claims instantly. About a third of claims are paid within seconds. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
+      answer: "Lemonade uses AI to process claims fast — about half are paid in minutes. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
     },
     {
       question: "Can I use any vet?",
@@ -46,7 +46,7 @@ export default function SimplePage() {
             <div className="flex justify-center pt-4 pb-2">
               <div className="inline-flex items-center gap-2 bg-[#f5c518] text-[#1a1a1a] px-4 py-1.5 rounded-full font-bold text-xs">
                 <span>🏆</span>
-                <span>Editor&apos;s Choice 2026 · #1 Pet Insurance</span>
+                <span>Editor&apos;s Choice 2026 · Pet Insurance</span>
               </div>
             </div>
 
@@ -66,8 +66,12 @@ export default function SimplePage() {
             {/* Content - Condensed */}
             <div className="px-5 pb-5 text-center">
               {/* Company Name */}
-              <h1 className="text-2xl font-extrabold text-[var(--lemonade-dark)] mb-1">
-                <span className="italic text-[#FF0083]">Lemonade</span> Pet Insurance
+              <div className="flex items-center justify-center gap-1.5 mb-2">
+                <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-7 w-auto rounded-lg" />
+                <span className="text-base font-bold text-[var(--lemonade-dark)]">Paw Policy chooses</span>
+              </div>
+              <h1 className="text-2xl font-extrabold text-[var(--lemonade-dark)] mb-1 flex items-center justify-center gap-2">
+                <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={140} height={32} className="inline-block" /> Pet Insurance
               </h1>
 
               <h2 className="text-sm text-[var(--lemonade-gray)] mb-3">
@@ -78,9 +82,9 @@ export default function SimplePage() {
               <div className="space-y-2 mb-4 text-left">
                 {[
                   'Accident & illness coverage from $10/mo',
-                  'Fast, app-based claims paid in minutes',
+                  '~50% of claims paid in minutes via AI',
                   'Any vet, anywhere in the U.S.',
-                  '4.9★ rated by 1M+ pet parents',
+                  '4.9★ App Store rating (85K+ reviews)',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
@@ -106,7 +110,7 @@ export default function SimplePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why <span className="italic text-[#FF0083]">Lemonade</span>?
+            Why <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={120} height={28} className="inline-block align-middle" />?
           </h2>
           <p className="text-[var(--lemonade-gray)] text-center mb-8 text-sm">
             What makes them stand out from traditional pet insurers
@@ -171,7 +175,7 @@ export default function SimplePage() {
             Ready to protect your pet?
           </h2>
           <p className="text-blue-100 mb-6 text-sm">
-            Join over 1 million pet parents who trust <span className="italic font-bold">Lemonade</span>.
+            Trusted by pet parents everywhere. Rated 4.9★ with 85,000+ reviews.
           </p>
           <CTAButton variant="secondary" size="large" className="bg-white hover:bg-gray-100">
             See Prices →

@@ -10,8 +10,6 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet Insurance</a>
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet FAQ</a>
-            <a href="https://www.lemonade.com/terms" className="hover:text-[var(--accent)] transition-colors">Terms</a>
-            <a href="https://www.lemonade.com/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy</a>
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-gray-300 text-center text-xs text-[var(--lemonade-gray)]">

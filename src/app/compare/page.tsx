@@ -321,12 +321,12 @@ export default function ComparePage() {
       <header className="bg-[var(--lemonade-dark)] text-white py-4 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="relative w-8 h-8">
+            <div className="relative w-8 h-8 rounded-lg overflow-hidden">
               <Image
                 src="/images/paw-policy-logo.png"
                 alt="PawPolicy logo"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             <span className="font-bold">PawPolicy Research</span>
@@ -396,7 +396,7 @@ export default function ComparePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why <span className="italic text-[#FF0083]">Lemonade</span> Stands Out
+            Why <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={120} height={28} className="inline-block align-middle" /> Stands Out
           </h2>
           <p className="text-center text-[var(--lemonade-gray)] mb-8">
             What sets them apart from traditional insurers

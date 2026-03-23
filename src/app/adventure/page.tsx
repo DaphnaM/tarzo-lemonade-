@@ -22,7 +22,7 @@ export default function AdventurePage() {
     },
     {
       question: "How fast can I get reimbursed?",
-      answer: "Lemonade's AI processes about 30% of claims instantly—within seconds. More complex claims typically take 1-2 business days. Just snap a photo of your vet bill in the app."
+      answer: "Lemonade's AI processes about half of claims in minutes. More complex claims typically take 1-2 business days. Just snap a photo of your vet bill in the app."
     },
     {
       question: "Can I use any vet or emergency clinic?",

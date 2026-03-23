@@ -9,12 +9,9 @@ interface FAQItem {
 
 interface FAQAccordionProps {
   items: FAQItem[];
-  showOfficialLink?: boolean;
 }
 
-const OFFICIAL_FAQ_URL = "https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/";
-
-export default function FAQAccordion({ items, showOfficialLink = true }: FAQAccordionProps) {
+export default function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -42,18 +39,6 @@ export default function FAQAccordion({ items, showOfficialLink = true }: FAQAcco
           </div>
         ))}
       </div>
-      {showOfficialLink && (
-        <div className="mt-6 text-center">
-          <a
-            href={OFFICIAL_FAQ_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline font-medium"
-          >
-            View official Lemonade FAQ →
-          </a>
-        </div>
-      )}
     </div>
   );
 }

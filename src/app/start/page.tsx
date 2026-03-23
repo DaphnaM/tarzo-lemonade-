@@ -112,7 +112,7 @@ export default function StartPage() {
               </div>
               <div className="bg-purple-50 rounded-lg p-4 mb-6">
                 <p className="text-sm text-[var(--lemonade-gray)]">
-                  <span className="font-bold">Did you know?</span> 1 in 4 dogs will develop cancer. ACL surgery costs $3,000–$7,000. Lemonade covers both.
+                  <span className="font-bold">Did you know?</span> ACL surgery costs $3,000–$7,000. Lemonade covers it.
                 </p>
               </div>
               <CTAButton className="w-full">Get My Dog Quote</CTAButton>

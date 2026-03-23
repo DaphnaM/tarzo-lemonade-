@@ -38,6 +38,7 @@ export default function CTAButton({
       rel="noopener noreferrer"
       onClick={() => { if (typeof conv === 'function') conv(); }}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      suppressHydrationWarning
     >
       {children}
     </a>

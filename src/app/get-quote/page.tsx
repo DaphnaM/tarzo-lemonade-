@@ -49,18 +49,18 @@ export default function GetQuotePage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <span className="inline-block px-4 py-1 bg-blue-100 text-[var(--primary)] rounded-full text-sm font-medium mb-6">
-              #1 Rated Pet Insurance App
+              Top-Rated Pet Insurance App
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--lemonade-dark)] mb-6 leading-tight">
               Pet insurance in<br />
               <span className="text-[var(--primary)]">Save Up to 90% on Vet Bills.</span>
             </h1>
             <p className="text-xl text-[var(--lemonade-gray)] mb-8 max-w-lg">
-              Join millions of pet parents who protect their furry family members. Customize your coverage, pick your price, and never stress about vet bills again.
+              Protect your furry family member with top-rated coverage. Customize your plan, pick your price, and never stress about vet bills again.
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
             <div className="mt-8">
-              <TrustStrip items={["Any licensed vet in the US", "Claims paid in minutes", "70-90% of bills covered"]} />
+              <TrustStrip items={["Any licensed vet in the US", "~50% of claims paid in minutes", "70-90% of bills covered"]} />
             </div>
           </div>
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
@@ -179,7 +179,7 @@ export default function GetQuotePage() {
             </div>
             <div className="mt-6 p-4 bg-blue-50 rounded-lg">
               <p className="text-sm text-[var(--lemonade-dark)]">
-                <span className="font-bold">Optional add-ons:</span> Vet visit fees, dental illness, physical therapy, behavioral conditions, end-of-life care — starting at $1.89/month
+                <span className="font-bold">Optional add-ons:</span> Vet visit fees, dental illness, physical therapy, behavioral conditions, end-of-life care
               </p>
             </div>
           </div>
