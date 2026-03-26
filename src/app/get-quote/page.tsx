@@ -60,7 +60,7 @@ export default function GetQuotePage() {
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
             <div className="mt-8">
-              <TrustStrip items={["Any licensed vet in the US", "~50% of claims paid in minutes", "70-90% of bills covered"]} />
+              <TrustStrip items={["Any licensed vet in the US", "~50% of claims handled in minutes", "70-90% of bills covered"]} />
             </div>
           </div>
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
@@ -80,7 +80,7 @@ export default function GetQuotePage() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { stat: "4.9★", label: "App Store Rating (85K+ reviews)" },
-            { stat: "~50%", label: "Pet Claims Paid Instantly" },
+            { stat: "~50%", label: "Pet Claims Handled Instantly" },
             { stat: "90%", label: "Of Vet Bills Covered" },
             { stat: "Any Vet", label: "In the US Accepted" },
           ].map((item) => (
@@ -137,7 +137,7 @@ export default function GetQuotePage() {
             { step: "1", title: "Tell us about your pet", desc: "Name, breed, age — that's it. Takes 30 seconds." },
             { step: "2", title: "Customize your plan", desc: "Choose deductible, reimbursement rate, and annual limit." },
             { step: "3", title: "Visit any vet", desc: "Go to your regular vet, a specialist, or emergency clinic." },
-            { step: "4", title: "Get reimbursed fast", desc: "Submit claims in the app. Many are paid instantly." },
+            { step: "4", title: "Get reimbursed fast", desc: "Submit claims in the app. Many are handled instantly." },
           ].map((item) => (
             <div key={item.step} className="text-center bg-white rounded-xl p-6 shadow-sm">
               <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">

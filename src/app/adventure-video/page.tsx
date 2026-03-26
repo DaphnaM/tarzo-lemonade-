@@ -64,7 +64,7 @@ export default function AdventureVideoPage() {
             </p>
             <CTAButton size="large">Get My Free Quote</CTAButton>
             <div className="mt-6">
-              <TrustStrip items={["Any vet in the US", "Claims paid in seconds", "From $10/month"]} />
+              <TrustStrip items={["Any vet in the US", "Claims handled in seconds", "From $10/month"]} />
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function AdventureVideoPage() {
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { stat: "4.9★", label: "App Store rating" },
-            { stat: "~50%", label: "Claims paid instantly" },
+            { stat: "~50%", label: "Claims handled instantly" },
             { stat: "90%", label: "Of vet bills covered" },
             { stat: "Any", label: "Licensed US vet" },
           ].map((item, i) => (
@@ -213,7 +213,7 @@ export default function AdventureVideoPage() {
               { step: "1", title: "Get a quote", desc: "Tell us about your dog. Save up to 90% on vet bills." },
               { step: "2", title: "Customize", desc: "Pick your deductible, reimbursement rate & limits." },
               { step: "3", title: "Visit any vet", desc: "Go on adventures. See any licensed vet when needed." },
-              { step: "4", title: "Get reimbursed", desc: "Submit claims in-app. Get paid in seconds to days." },
+              { step: "4", title: "Get reimbursed", desc: "Submit claims in-app. Get reimbursed in seconds to days." },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-12 h-12 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">

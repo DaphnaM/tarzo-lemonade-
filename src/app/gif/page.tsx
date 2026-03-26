@@ -10,7 +10,7 @@ export default function GifPage() {
   const faqItems = [
     {
       question: "Why is Lemonade ranked #1?",
-      answer: "Lemonade stands out for its combination of competitive pricing, comprehensive coverage, fast app-based claims, and transparent policies. Unlike traditional insurers, there are no confusing fine print or hidden exclusions. Claims are often paid within minutes through their AI-powered system."
+      answer: "Lemonade stands out for its combination of competitive pricing, comprehensive coverage, fast app-based claims, and transparent policies. Unlike traditional insurers, there are no confusing fine print or hidden exclusions. Claims are often handled within minutes through their AI-powered system."
     },
     {
       question: "What does Lemonade pet insurance cover?",
@@ -21,8 +21,8 @@ export default function GifPage() {
       answer: "Plans start as low as $10/month for basic accident coverage. The average dog policy is around $35/month, and cats average around $20/month. Your exact price depends on your pet's age, breed, location, and the coverage level you choose."
     },
     {
-      question: "How fast are claims paid?",
-      answer: "Lemonade uses AI to process claims fast — about half are paid in minutes. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
+      question: "How fast are claims handled?",
+      answer: "Lemonade uses AI to process claims fast — about half are handled in minutes. More complex claims typically take 1-2 business days. You submit claims through the app by taking photos of your vet bill — no paperwork required."
     },
     {
       question: "Can I use any vet?",
@@ -67,7 +67,7 @@ export default function GifPage() {
             {/* Content */}
             <div className="px-5 pb-5 text-center">
               {/* Lemonade Logo */}
-              <h1 className="text-3xl font-extrabold text-[var(--primary)] mb-1">
+              <h1 className="text-3xl font-extrabold text-[#4A4A4A] mb-1">
                 Paw Policy
               </h1>
 
@@ -82,8 +82,8 @@ export default function GifPage() {
               {/* Compact Checkmarks */}
               <div className="space-y-2 mb-4 text-left">
                 {[
-                  'Accident & illness coverage from $10/mo',
-                  '~50% of claims paid in minutes via AI',
+                  'Accident & illness coverage from $10/month',
+                  '~50% of claims handled in minutes via AI',
                   'Any vet, anywhere in the U.S.',
                   '4.9★ App Store rating (85K+ reviews)',
                 ].map((item, i) => (
@@ -111,7 +111,7 @@ export default function GifPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={120} height={28} className="inline-block align-middle" />?
+            Why <Image src="/images/lemonade-logo-grey.png" alt="Lemonade" width={120} height={28} className="inline-block align-middle" />?
           </h2>
           <p className="text-[var(--lemonade-gray)] text-center mb-8 text-sm">
             What makes them stand out from traditional pet insurers

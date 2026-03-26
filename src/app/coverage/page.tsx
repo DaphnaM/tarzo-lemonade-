@@ -14,7 +14,7 @@ export default function CoveragePage() {
     },
     {
       question: "How does the claims process actually work?",
-      answer: "You pay your vet bill, then open the Lemonade app and take a photo of the itemized invoice. Describe what happened in a few sentences and submit. Many pet claims are reviewed and paid instantly by AI. Larger claims get human review within 24-48 hours. Money goes directly to your bank account."
+      answer: "You pay your vet bill, then open the Lemonade app and take a photo of the itemized invoice. Describe what happened in a few sentences and submit. Many pet claims are reviewed and handled instantly by AI. Larger claims get human review within 24-48 hours. Money goes directly to your bank account."
     },
     {
       question: "What if my claim gets denied?",
@@ -86,7 +86,7 @@ export default function CoveragePage() {
           {[
             { stat: "4.9★", label: "App Store rating (85K+ reviews)" },
             { stat: "B Corp", label: "Public Benefit Corporation" },
-            { stat: "~50%", label: "Pet claims paid instantly" },
+            { stat: "~50%", label: "Pet claims handled instantly" },
             { stat: "In-App", label: "24/7 AI + human support" },
           ].map((item) => (
             <div key={item.label}>
@@ -117,12 +117,12 @@ export default function CoveragePage() {
             {
               icon: "🤖",
               title: "AI-powered, human-backed",
-              desc: "AI handles routine claims instantly (many paid in seconds). Complex cases get human review. You get the best of both worlds: speed and empathy."
+              desc: "AI handles routine claims instantly (many handled in seconds). Complex cases get human review. You get the best of both worlds: speed and empathy."
             },
             {
               icon: "📱",
               title: "Designed for real life",
-              desc: "File claims from your phone in 2 minutes. Track status in real-time. Get paid directly to your bank account. No paperwork, no faxes, no 1-800 numbers."
+              desc: "File claims from your phone in 2 minutes. Track status in real-time. Get reimbursed directly to your bank account. No paperwork, no faxes, no 1-800 numbers."
             },
           ].map((item) => (
             <div key={item.title} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">

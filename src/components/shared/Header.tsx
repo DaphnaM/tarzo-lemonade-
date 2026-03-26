@@ -4,9 +4,8 @@ export default function Header() {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-12 w-auto rounded-xl" />
-          <span className="text-xl font-bold text-[var(--lemonade-dark)]">Paw Policy</span>
+          <span className="text-xl font-bold text-[#4A4A4A]">Paw Policy</span>
         </div>
-        <span className="text-sm text-[var(--lemonade-gray)]">Pet Insurance</span>
       </div>
     </header>
   );

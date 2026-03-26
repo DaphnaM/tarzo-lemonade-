@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-10 w-auto rounded-xl" />
-            <span className="text-lg font-bold text-[var(--lemonade-dark)]">Paw Policy</span>
+            <span className="text-lg font-bold text-[#4A4A4A]">Paw Policy</span>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet Insurance</a>

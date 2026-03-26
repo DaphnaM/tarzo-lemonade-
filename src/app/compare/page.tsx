@@ -10,7 +10,7 @@ const insurers = [
     name: 'Lemonade',
     logoText: 'Lemonade',
     logoStyle: 'font-bold text-3xl italic',
-    logoImage: '/images/lemonade-logo.webp',
+    logoImage: '/images/lemonade-logo-grey.png',
     logoType: 'wide' as const,
     brandColor: '#FF0083',
     score: 9.8,
@@ -18,9 +18,9 @@ const insurers = [
     claimSpeed: 'Minutes (AI)',
     highlight: "Editor's Choice",
     tagline: 'Best budget pick with AI-powered claims',
-    description: 'Lemonade is the standout budget pick. Its AI-powered app handles claims in minutes for nearly half of submissions. The trade-off is that they keep prices down by leaving several commonly covered conditions off their base plan — dental, physical therapy, and behavioral conditions all require paid add-ons.',
-    detailPros: ['Cheapest overall starting price', '~50% of claims paid in minutes via AI', '4.9★ app (85k+ reviews)', 'Any licensed vet accepted'],
-    detailCons: ['Base plan has thin coverage', '14-year age limit for enrollment'],
+    description: 'Lemonade is the standout budget pick. Its AI-powered app handles claims in minutes for nearly half of submissions. Policies can be customized with add-ons depending on coverage needs, offering flexibility across different types of care.',
+    detailPros: ['Cheapest overall starting price', '~50% of claims handled in minutes via AI', '4.9★ app (85k+ reviews)', 'Any licensed vet accepted'],
+    detailNotes: ['Coverage can be customized with optional add-ons', 'Plan availability may vary based on pet and location'],
     isWinner: true,
   },
   {
@@ -38,7 +38,7 @@ const insurers = [
     tagline: 'Simple, reliable with no payout limits',
     description: 'Healthy Paws is simple and reliable. It offers a single plan with no annual or lifetime payout limits, covering alternative therapies like acupuncture and chiropractic in the base plan. The main gap: there\'s no wellness plan option, and exam fees aren\'t covered.',
     detailPros: ['Unlimited payouts — no annual or lifetime cap', '24/7 vet helpline included', '70-90% reimbursement options'],
-    detailCons: ['No wellness add-on available', 'No exam fee coverage'],
+    detailNotes: ['No wellness add-on available', 'No exam fee coverage'],
     isWinner: false,
   },
   {
@@ -56,7 +56,7 @@ const insurers = [
     tagline: 'Most comprehensive base coverage',
     description: 'Embrace is the most comprehensive of the five. It covers dental illness as a standard feature — something most other insurers don\'t offer. It also has a unique diminishing deductible feature. It holds an A+ rating from the BBB, though premiums have been rising year-over-year for many policyholders.',
     detailPros: ['Dental illness covered in base plan', 'Diminishing deductible saves money over time', 'A+ BBB rating'],
-    detailCons: ['Exam fees require add-on', 'Premiums tend to rise yearly'],
+    detailNotes: ['Exam fees require add-on', 'Premiums tend to rise yearly'],
     isWinner: false,
   },
   {
@@ -74,7 +74,7 @@ const insurers = [
     tagline: 'Great middle ground with no age cap',
     description: 'Pets Best hits a solid middle ground. It has no maximum enrollment age and covers routine procedures like spaying, microchipping, and teeth cleaning with the right plan. It also offers a direct vet pay option so you don\'t have to pay out of pocket first.',
     detailPros: ['No breed restrictions or age limits', 'Direct vet pay option', 'Three coverage tiers to choose from'],
-    detailCons: ['F rating from BBB', 'Some reports of slow claims processing'],
+    detailNotes: ['F rating from BBB', 'Some reports of slow claims processing'],
     isWinner: false,
   },
   {
@@ -92,7 +92,7 @@ const insurers = [
     tagline: 'Premium option with direct vet payment',
     description: 'Trupanion is premium-priced but genuinely unique. It\'s the only provider that can pay veterinarians directly at checkout, often in seconds, meaning you may never have to pay out-of-pocket at the vet. It also never increases or cancels your coverage because of claims you submit.',
     detailPros: ['Pays vet directly at checkout — no out-of-pocket', 'Unlimited coverage with no payout caps', 'No price hikes based on claims history'],
-    detailCons: ['Most expensive option (~$165/mo avg for dogs)', 'Fixed 90% reimbursement — no choice'],
+    detailNotes: ['Most expensive option (~$165/mo avg for dogs)', 'Fixed 90% reimbursement — no choice'],
     isWinner: false,
   },
 ];
@@ -259,12 +259,13 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
                 ))}
               </div>
               <div>
-                {insurer.detailCons.map((con: string, i: number) => (
+                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Things to Know</div>
+                {insurer.detailNotes.map((note: string, i: number) => (
                   <div key={i} className="flex items-start gap-3 mb-3">
-                    <svg className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-base text-gray-600">{con}</span>
+                    <span className="text-base text-gray-500">{note}</span>
                   </div>
                 ))}
               </div>
@@ -291,7 +292,7 @@ export default function ComparePage() {
     },
     {
       question: "Why is Lemonade ranked #1?",
-      answer: "Lemonade scored highest overall due to its combination of competitive pricing (from $10/mo), fast AI-powered claims processing (roughly 50% of claims paid in minutes), excellent mobile app experience (4.9★ rating), and transparent policies. Their technology-first approach sets them apart."
+      answer: "Lemonade scored highest overall due to its combination of competitive pricing (from $10/mo), fast AI-powered claims processing (roughly 50% of claims handled in minutes), excellent mobile app experience (4.9★ rating), and transparent policies. Their technology-first approach sets them apart."
     },
     {
       question: "How accurate are the monthly prices shown?",
@@ -299,7 +300,7 @@ export default function ComparePage() {
     },
     {
       question: "What about claims processing times?",
-      answer: "Lemonade processes roughly 50% of claims in minutes using AI, with others taking 2-4 days. Healthy Paws averages about 2 days. Pets Best takes 3-7 days. Trupanion can pay participating vets directly at the time of service, eliminating wait times entirely."
+      answer: "Lemonade handles roughly 50% of claims in minutes using AI, with others taking 2-4 days. Healthy Paws averages about 2 days. Pets Best takes 3-7 days. Trupanion can pay participating vets directly at the time of service, eliminating wait times entirely."
     },
     {
       question: "Do all these companies cover pre-existing conditions?",
@@ -389,7 +390,7 @@ export default function ComparePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-extrabold text-[var(--lemonade-dark)] text-center mb-3">
-            Why <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={120} height={28} className="inline-block align-middle" /> Stands Out
+            Why <Image src="/images/lemonade-logo-grey.png" alt="Lemonade" width={120} height={28} className="inline-block align-middle"  /> Stands Out
           </h2>
           <p className="text-center text-[var(--lemonade-gray)] mb-8">
             What sets them apart from traditional insurers
@@ -400,22 +401,22 @@ export default function ComparePage() {
               {
                 icon: '⚡',
                 title: 'AI-Powered Claims',
-                desc: 'About 50% of claims are processed and paid in minutes. Their AI reviews documents instantly—just submit through the app.'
+                desc: 'About 50% of claims are handled in minutes.'
               },
               {
                 icon: '💰',
                 title: 'Competitive Pricing',
-                desc: 'Plans start at $10/month, below the industry average of $35-60 for dogs. No hidden fees or surprise rate hikes.'
+                desc: 'Plans start at $10/month.'
               },
               {
                 icon: '📱',
                 title: 'Top-Rated App',
-                desc: '4.9★ app store rating. Manage your policy, file claims by photo, and get reimbursed—all from your phone.'
+                desc: '4.9★ app store rating. Manage your policy, file claims by photo, and get reimbursed.'
               },
               {
                 icon: '🏥',
                 title: 'Any Licensed Vet',
-                desc: 'Visit any licensed veterinarian, specialist, or emergency hospital in the US. No network restrictions.'
+                desc: 'Visit any licensed veterinarian, specialist, or emergency hospital in the US.'
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 p-4 bg-slate-100 rounded-xl border border-slate-200">

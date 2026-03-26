@@ -13,7 +13,7 @@ export default function MobilePage() {
         {/* App-like Header */}
         <header className="flex items-center justify-center gap-2 py-3 border-b border-gray-100">
           <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-8 w-auto rounded-lg" />
-          <span className="text-lg font-bold text-[var(--lemonade-dark)]">Paw Policy</span>
+          <span className="text-lg font-bold text-[#4A4A4A]">Paw Policy</span>
         </header>
 
         {/* Main Content */}
@@ -37,8 +37,7 @@ export default function MobilePage() {
           {/* Value Prop */}
           <div className="text-center mb-5">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Image src="/images/lemonade-logo.webp" alt="Lemonade" width={130} height={30} />
-              <span className="text-lg font-extrabold text-[var(--lemonade-dark)]">Pet Insurance</span>
+              <Image src="/images/lemonade-logo-grey.png" alt="Lemonade" width={130} height={30} />
             </div>
             <h1 className="text-xl font-extrabold text-[var(--lemonade-dark)] mb-1">
               Pet insurance that actually pays
@@ -49,46 +48,26 @@ export default function MobilePage() {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-4 gap-2 mb-5 bg-gray-50 rounded-xl p-3">
+          <div className="grid grid-cols-3 gap-2 mb-5 bg-gray-50 rounded-xl p-3">
             <div className="text-center">
-              <div className="text-lg font-bold text-[var(--primary)]">$10</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">From/mo</div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-bold text-[var(--primary)]">4.9★</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">App Store</div>
+              <div className="text-sm font-bold text-[var(--lemonade-dark)]">From $10/month</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-[var(--primary)]">~50%</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">Instant claims</div>
+              <div className="text-sm font-bold text-[var(--lemonade-dark)]">4.9★ App Store</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-[var(--primary)]">Any</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">Vet in US</div>
-            </div>
-          </div>
-
-          {/* Cost Comparison */}
-          <div className="flex gap-3 mb-5">
-            <div className="flex-1 bg-red-50 border border-red-200 rounded-xl p-3 text-center">
-              <div className="text-[10px] text-red-600 font-medium mb-1">Without insurance</div>
-              <div className="text-xl font-extrabold text-red-600">$3,000+</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">Avg. surgery</div>
-            </div>
-            <div className="flex-1 bg-green-50 border border-green-200 rounded-xl p-3 text-center">
-              <div className="text-[10px] text-green-600 font-medium mb-1">With insurance</div>
-              <div className="text-xl font-extrabold text-green-600">$10/mo</div>
-              <div className="text-[10px] text-[var(--lemonade-gray)]">Starting at</div>
+              <div className="text-sm font-bold text-[var(--lemonade-dark)]">~50% handled</div>
+              <div className="text-[10px] text-[var(--lemonade-gray)]">in minutes</div>
             </div>
           </div>
 
           {/* Key benefits */}
           <div className="space-y-2 mb-5">
             {[
-              'Accidents & illness coverage',
-              'Any licensed vet in the U.S.',
-              '70-90% of vet bills reimbursed',
-              'Cancel anytime, no fees',
+              'Accident & illness coverage from $10/month',
+              '~50% of claims handled in minutes via AI',
+              'Any vet, anywhere in the U.S.',
+              '4.9★ App Store rating (85K+ reviews)',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
