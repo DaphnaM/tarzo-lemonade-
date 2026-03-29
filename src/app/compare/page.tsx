@@ -125,7 +125,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
 
   return (
     <div
-      className={`relative rounded-2xl border-2 transition-all ${
+      className={`relative rounded-2xl border-2 transition-shadow ${
         insurer.isWinner
           ? 'border-amber-400 bg-white shadow-xl scale-[1.02] z-10'
           : 'bg-white hover:shadow-md'
@@ -166,34 +166,31 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
             <div className="flex items-center gap-4">
               {insurer.logoType === 'icon' ? (
                 <>
-                  <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
-                    <Image
-                      src={insurer.logoImage!}
-                      alt={`${insurer.name} logo`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Image
+                    src={insurer.logoImage!}
+                    alt={`${insurer.name} logo`}
+                    width={56}
+                    height={56}
+                    className="flex-shrink-0 rounded-xl object-cover"
+                  />
                   <span className="font-bold text-2xl text-[var(--lemonade-dark)]">{insurer.name}</span>
                 </>
               ) : insurer.logoType === 'square' ? (
-                <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
-                  <Image
-                    src={insurer.logoImage!}
-                    alt={`${insurer.name} logo`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                <Image
+                  src={insurer.logoImage!}
+                  alt={`${insurer.name} logo`}
+                  width={56}
+                  height={56}
+                  className="flex-shrink-0 rounded-xl object-contain"
+                />
               ) : (
-                <div className="relative w-48 h-16 flex-shrink-0 bg-white rounded-lg">
-                  <Image
-                    src={insurer.logoImage!}
-                    alt={`${insurer.name} logo`}
-                    fill
-                    className="object-contain object-left"
-                  />
-                </div>
+                <Image
+                  src={insurer.logoImage!}
+                  alt={`${insurer.name} logo`}
+                  width={192}
+                  height={64}
+                  className="flex-shrink-0 object-contain object-left"
+                />
               )}
             </div>
             {/* Tagline - always visible */}
@@ -315,14 +312,13 @@ export default function ComparePage() {
       <header className="bg-[var(--lemonade-dark)] text-white py-4 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden">
-              <Image
-                src="/images/paw-policy-logo.png"
-                alt="PawPolicy logo"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <Image
+              src="/images/paw-policy-logo.png"
+              alt="PawPolicy logo"
+              width={32}
+              height={32}
+              className="rounded-lg object-cover"
+            />
             <span className="font-bold">PawPolicy Research</span>
           </div>
           <span className="text-sm text-gray-400">Pet Insurance Analysis</span>
