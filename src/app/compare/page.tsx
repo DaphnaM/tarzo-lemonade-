@@ -92,7 +92,7 @@ const insurers = [
     tagline: 'Premium option with direct vet payment',
     description: 'Trupanion is premium-priced but genuinely unique. It\'s the only provider that can pay veterinarians directly at checkout, often in seconds, meaning you may never have to pay out-of-pocket at the vet. It also never increases or cancels your coverage because of claims you submit.',
     detailPros: ['Pays vet directly at checkout — no out-of-pocket', 'Unlimited coverage with no payout caps', 'No price hikes based on claims history'],
-    detailNotes: ['Most expensive option (~$165/mo avg for dogs)', 'Fixed 90% reimbursement — no choice'],
+    detailNotes: ['Most expensive option (~$165/month avg for dogs)', 'Fixed 90% reimbursement — no choice'],
     isWinner: false,
   },
 ];
@@ -226,7 +226,7 @@ function InsurerCard({ insurer }: { insurer: typeof insurers[number] }) {
         {/* Quick stats - always visible */}
         <div className="mt-4 flex items-center gap-6 text-base ml-20">
           <span className="text-gray-600">
-            From <strong className="text-lg" style={{ color: insurer.brandColor }}>{insurer.monthlyFrom}</strong>/mo
+            From <strong className="text-lg" style={{ color: insurer.brandColor }}>{insurer.monthlyFrom}</strong>/month
           </span>
           <span className="text-gray-300">|</span>
           <span className="text-gray-500">Claims: <strong>{insurer.claimSpeed}</strong></span>
@@ -292,7 +292,7 @@ export default function ComparePage() {
     },
     {
       question: "Why is Lemonade ranked #1?",
-      answer: "Lemonade scored highest overall due to its combination of competitive pricing (from $10/mo), fast AI-powered claims processing (roughly 50% of claims handled in minutes), excellent mobile app experience (4.9★ rating), and transparent policies. Their technology-first approach sets them apart."
+      answer: "Lemonade scored highest overall due to its combination of competitive pricing (from $10/month), fast AI-powered claims processing (roughly 50% of claims handled in minutes), excellent mobile app experience (4.9★ rating), and transparent policies. Their technology-first approach sets them apart."
     },
     {
       question: "How accurate are the monthly prices shown?",
@@ -344,11 +344,11 @@ export default function ComparePage() {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="bg-white/10 rounded-lg px-4 py-2">
               <span className="text-gray-400">Avg. dog policy:</span>
-              <span className="text-xl font-bold ml-2">$35-60/mo</span>
+              <span className="text-xl font-bold ml-2">$35-60/month</span>
             </div>
             <div className="bg-white/10 rounded-lg px-4 py-2">
               <span className="text-gray-400">Avg. cat policy:</span>
-              <span className="text-xl font-bold ml-2">$20-35/mo</span>
+              <span className="text-xl font-bold ml-2">$20-35/month</span>
             </div>
           </div>
         </div>
