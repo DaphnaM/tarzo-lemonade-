@@ -43,7 +43,7 @@ export default function MobilePage() {
               Pet insurance that actually pays
             </h1>
             <p className="text-[var(--lemonade-gray)] text-sm">
-              Cover your furry friend for less than a coffee a day
+              Plans from $10/month, real coverage, simple signup
             </p>
           </div>
 
