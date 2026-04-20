@@ -1,6 +1,6 @@
 'use client';
 
-declare function conv(): void;
+import { trackCtaClick } from '@/lib/tracking';
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -36,7 +36,7 @@ export default function CTAButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => { if (typeof conv === 'function') conv(); }}
+      onClick={trackCtaClick}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
       suppressHydrationWarning
     >

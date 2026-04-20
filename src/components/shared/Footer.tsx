@@ -1,3 +1,7 @@
+'use client';
+
+import { trackCtaClick } from '@/lib/tracking';
+
 export default function Footer() {
   return (
     <footer className="w-full py-8 px-6 bg-[var(--lemonade-light-gray)] border-t border-gray-200">
@@ -8,8 +12,8 @@ export default function Footer() {
             <span className="text-lg font-bold text-[#4A4A4A]">Paw Policy</span>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
-            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet Insurance</a>
-            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">Pet FAQ</a>
+            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet Insurance</a>
+            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet FAQ</a>
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-gray-300 text-center text-xs text-[var(--lemonade-gray)]">

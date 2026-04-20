@@ -1,4 +1,7 @@
+'use client';
+
 import { CTA_LINK } from '../shared/CTAButton';
+import { trackCtaClick } from '@/lib/tracking';
 
 interface DualCTAButtonsProps {
   dogLabel?: string;
@@ -15,7 +18,9 @@ export default function DualCTAButtons({
         href={CTA_LINK}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackCtaClick}
         className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] hover:shadow-lg transition-all duration-200 text-center"
+        suppressHydrationWarning
       >
         {dogLabel}
       </a>
@@ -23,7 +28,9 @@ export default function DualCTAButtons({
         href={CTA_LINK}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackCtaClick}
         className="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-white text-[var(--accent)] border-2 border-[var(--accent)] hover:bg-orange-50 transition-all duration-200 text-center"
+        suppressHydrationWarning
       >
         {catLabel}
       </a>
