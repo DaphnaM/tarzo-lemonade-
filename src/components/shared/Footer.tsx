@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { trackCtaClick } from '@/lib/tracking';
 
 export default function Footer() {
@@ -14,6 +15,10 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet Insurance</a>
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet FAQ</a>
+            <Link href="/contact" className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
+            <Link href="/terms" className="hover:text-[var(--accent)] transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy Policy</Link>
+            <Link href="/ccpa" className="hover:text-[var(--accent)] transition-colors">CCPA Privacy Notice</Link>
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-gray-300 text-center text-xs text-[var(--lemonade-gray)]">
