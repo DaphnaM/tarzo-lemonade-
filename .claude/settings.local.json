@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(npx create-next-app:*)",
-      "Bash(git commit:*)"
-    ]
+      "Bash(git commit:*)",
+      "Bash(ls:*)",
+      "Bash(node:*)",
+      "Bash(npx next build)"
+    ],
+    "additionalDirectories": ["~/Downloads"]
   }
 }
