@@ -3,34 +3,34 @@ import Link from 'next/link';
 import { CTAButton } from '@/components/shared';
 
 export const metadata = {
-  title: 'Get Pet Insurance | Paw Policy',
-  description: 'Protect your pet with affordable pet insurance. Fast claims, any vet, plans from $10/mo.',
+  title: 'Puppy Insurance | Paw Policy',
+  description: 'Protect your puppy with affordable pet insurance. Fast claims, any vet, plans from $10/mo.',
 };
 
-export default function MobilePinkPage() {
+export default function MobilePupPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-200 via-emerald-300 to-cyan-400 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200 flex items-center justify-center p-4">
       <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col min-h-[90vh]">
         {/* App-like Header */}
-        <header className="flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-teal-500 to-emerald-500">
+        <header className="flex items-center justify-center gap-2 py-3 border-b border-blue-100">
           <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-8 w-auto rounded-lg" />
-          <span className="text-lg font-bold text-white">Paw Policy</span>
+          <span className="text-lg font-bold text-[#4A4A4A]">Paw Policy</span>
         </header>
 
         {/* Main Content */}
         <main className="flex-1 flex flex-col px-5 py-5">
           {/* Hero Image */}
-          <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-5 -mt-2 shadow-lg">
+          <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-5">
             <Image
-              src="/images/happy-dog.jpg"
+              src="/images/happy-pup.jpg"
               alt="Happy dog"
               fill
               className="object-cover"
               priority
             />
             <div className="absolute top-3 left-3">
-              <span className="inline-flex items-center gap-1 bg-white text-teal-600 px-3 py-1 rounded-full font-bold text-xs shadow-md">
-                💚 #1 Loved
+              <span className="inline-flex items-center gap-1 bg-blue-600 text-white px-3 py-1 rounded-full font-bold text-xs shadow-md">
+                🐶 Puppy-Ready
               </span>
             </div>
           </div>
@@ -41,15 +41,15 @@ export default function MobilePinkPage() {
               <Image src="/images/lemonade-logo-grey.png" alt="Lemonade" width={130} height={30} />
             </div>
             <h1 className="text-xl font-extrabold text-[var(--lemonade-dark)] mb-1">
-              Pet insurance that actually pays
+              Coverage built for your puppy
             </h1>
             <p className="text-[var(--lemonade-gray)] text-sm">
-              Plans from $10/month, real coverage, simple signup
+              Puppy plans from $10/month, real coverage, simple signup
             </p>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-2 mb-5 bg-gradient-to-r from-teal-50 to-emerald-50 rounded-xl p-3 ring-1 ring-teal-100">
+          <div className="grid grid-cols-3 gap-2 mb-5 bg-blue-50 rounded-xl p-3">
             <div className="text-center">
               <div className="text-sm font-bold text-[var(--lemonade-dark)]">From $10/month</div>
             </div>
@@ -71,8 +71,8 @@ export default function MobilePinkPage() {
               '4.9★ App Store rating (85K+ reviews)',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-100 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
@@ -86,7 +86,7 @@ export default function MobilePinkPage() {
 
           {/* Bottom CTA */}
           <div className="space-y-2">
-            <CTAButton size="large" className="w-full py-4 text-lg !bg-gradient-to-r !from-teal-500 !to-emerald-500 hover:!from-teal-600 hover:!to-emerald-600">
+            <CTAButton size="large" className="w-full py-4 text-lg">
               Get My Price →
             </CTAButton>
             <p className="text-center text-[10px] text-[var(--lemonade-gray)]">
@@ -96,15 +96,15 @@ export default function MobilePinkPage() {
         </main>
 
         {/* Legal Footer */}
-        <footer className="border-t border-teal-100 px-5 py-3 bg-gradient-to-r from-teal-50 to-emerald-50">
+        <footer className="border-t border-blue-100 px-5 py-3 bg-blue-50">
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[10px] text-[var(--lemonade-gray)]">
-            <Link href="/mobile-pink/contact" className="hover:text-teal-600 transition-colors">Contact Us</Link>
+            <Link href="/mobile-pup/contact" className="hover:text-blue-600 transition-colors">Contact Us</Link>
             <span>·</span>
-            <Link href="/mobile-pink/terms" className="hover:text-teal-600 transition-colors">Terms</Link>
+            <Link href="/mobile-pup/terms" className="hover:text-blue-600 transition-colors">Terms</Link>
             <span>·</span>
-            <Link href="/mobile-pink/privacy" className="hover:text-teal-600 transition-colors">Privacy</Link>
+            <Link href="/mobile-pup/privacy" className="hover:text-blue-600 transition-colors">Privacy</Link>
             <span>·</span>
-            <Link href="/mobile-pink/ccpa" className="hover:text-teal-600 transition-colors">CCPA</Link>
+            <Link href="/mobile-pup/ccpa" className="hover:text-blue-600 transition-colors">CCPA</Link>
           </div>
         </footer>
       </div>

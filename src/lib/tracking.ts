@@ -24,6 +24,11 @@ const META_TRACKED_PATHS = new Set([
   '/mobile-dark',
   '/mobile-pink',
   '/mobile-minimal',
+  '/mobile-pup',
+  '/mobile-kitty',
+  '/mobile-family',
+  '/mobile-hero',
+  '/mobile-cozy',
   '/compare',
   '/simple',
 ]);

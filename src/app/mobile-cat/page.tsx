@@ -22,13 +22,13 @@ export default function MobileCatPage() {
           {/* Hero Image */}
           <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-5">
             <Image
-              src="/images/happy-cat.jpg"
+              src="/images/hero-cat.jpg"
               alt="Happy cat"
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute top-3 left-3">
+            <div className="absolute bottom-3 right-3">
               <span className="inline-flex items-center gap-1 bg-orange-500 text-white px-3 py-1 rounded-full font-bold text-xs shadow-md">
                 🐱 Cat-Approved
               </span>
