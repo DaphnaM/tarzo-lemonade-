@@ -1,9 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { trackCtaClick } from '@/lib/tracking';
+import { VARIANTS } from '@/components/legal/variants';
 
 export default function Footer() {
+  const pathname = usePathname() ?? '/';
+  const firstSegment = pathname.split('/')[1] ?? '';
+  const variantPrefix = firstSegment && firstSegment in VARIANTS ? `/${firstSegment}` : '';
+
   return (
     <footer className="w-full py-8 px-6 bg-[var(--lemonade-light-gray)] border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
@@ -15,10 +21,10 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet Insurance</a>
             <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet FAQ</a>
-            <Link href="/contact" className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
-            <Link href="/terms" className="hover:text-[var(--accent)] transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy Policy</Link>
-            <Link href="/ccpa" className="hover:text-[var(--accent)] transition-colors">CCPA Privacy Notice</Link>
+            <Link href={`${variantPrefix}/contact`} className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
+            <Link href={`${variantPrefix}/terms`} className="hover:text-[var(--accent)] transition-colors">Terms of Service</Link>
+            <Link href={`${variantPrefix}/privacy`} className="hover:text-[var(--accent)] transition-colors">Privacy Policy</Link>
+            <Link href={`${variantPrefix}/ccpa`} className="hover:text-[var(--accent)] transition-colors">CCPA Privacy Notice</Link>
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-gray-300 text-center text-xs text-[var(--lemonade-gray)]">

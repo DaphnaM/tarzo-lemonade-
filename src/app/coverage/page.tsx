@@ -64,7 +64,7 @@ export default function CoveragePage() {
             <div className="mt-8">
               <ProofStrip
                 rating="⭐️⭐️⭐️⭐️⭐️"
-                highlights={["85,000+ App Store reviews", "4.9★ rated", "Public benefit corp"]}
+                highlights={["85,000+ App Store reviews", "Public benefit corp"]}
               />
             </div>
           </div>

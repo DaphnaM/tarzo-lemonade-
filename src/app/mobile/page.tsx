@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { CTAButton } from '@/components/shared';
 
 export const metadata = {
@@ -93,6 +94,19 @@ export default function MobilePage() {
             </p>
           </div>
         </main>
+
+        {/* Legal Footer */}
+        <footer className="border-t border-gray-100 px-5 py-3 bg-gray-50">
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[10px] text-[var(--lemonade-gray)]">
+            <Link href="/mobile/contact" className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
+            <span>·</span>
+            <Link href="/mobile/terms" className="hover:text-[var(--accent)] transition-colors">Terms</Link>
+            <span>·</span>
+            <Link href="/mobile/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy</Link>
+            <span>·</span>
+            <Link href="/mobile/ccpa" className="hover:text-[var(--accent)] transition-colors">CCPA</Link>
+          </div>
+        </footer>
       </div>
     </div>
   );
