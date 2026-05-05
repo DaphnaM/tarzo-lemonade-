@@ -18,7 +18,15 @@ declare global {
 
 export const FACEBOOK_PIXEL_ID = '1372998671044958';
 
-const META_TRACKED_PATHS = new Set(['/mobile', '/compare', '/simple']);
+const META_TRACKED_PATHS = new Set([
+  '/mobile',
+  '/mobile-cat',
+  '/mobile-dark',
+  '/mobile-pink',
+  '/mobile-minimal',
+  '/compare',
+  '/simple',
+]);
 
 function normalizePathname(pathname: string) {
   return pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
