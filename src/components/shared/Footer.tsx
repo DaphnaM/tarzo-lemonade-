@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { trackCtaClick } from '@/lib/tracking';
 import { VARIANTS } from '@/components/legal/variants';
 
 export default function Footer() {
@@ -19,8 +18,6 @@ export default function Footer() {
             <span className="text-lg font-bold text-[#4A4A4A]">Paw Policy</span>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--lemonade-gray)]">
-            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet Insurance</a>
-            <a href="https://mecondstutiolin.com/click" target="_blank" rel="noopener noreferrer" onClick={trackCtaClick} className="hover:text-[var(--accent)] transition-colors" suppressHydrationWarning>Pet FAQ</a>
             <Link href={`${variantPrefix}/contact`} className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
             <Link href={`${variantPrefix}/terms`} className="hover:text-[var(--accent)] transition-colors">Terms of Service</Link>
             <Link href={`${variantPrefix}/privacy`} className="hover:text-[var(--accent)] transition-colors">Privacy Policy</Link>

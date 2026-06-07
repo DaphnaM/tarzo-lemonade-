@@ -55,19 +55,42 @@ export default function LegalPage({ theme, phoneFrame, homeHref, title, effectiv
         </div>
       </header>
 
-      <section className={`py-12 md:py-16 px-6 ${t.hero}`}>
+      <section className={`pt-6 pb-4 md:pt-8 md:pb-5 px-6 ${t.hero}`}>
         <div className="max-w-3xl mx-auto">
-          <p className={`text-sm mb-2 ${t.meta}`}>PawPolicy.pro</p>
-          <h1 className={`text-3xl md:text-4xl font-extrabold mb-2 ${t.title}`}>{title}</h1>
+          <p className={`text-sm mb-1 ${t.meta}`}>PawPolicy.pro</p>
+          <h1 className={`text-3xl md:text-4xl font-extrabold mb-1 ${t.title}`}>{title}</h1>
           {effectiveDate && <p className={`text-sm ${t.meta}`}>Effective Date: {effectiveDate}</p>}
         </div>
       </section>
 
-      <article className={`flex-1 px-6 py-10 md:py-12 ${theme === 'dark' ? 'prose-invert' : ''}`}>
+      <article className={`flex-1 px-6 pt-4 pb-10 md:pt-6 md:pb-12 ${theme === 'dark' ? 'prose-invert' : ''}`}>
         <div className="max-w-3xl mx-auto leading-relaxed">{children}</div>
       </article>
 
-      <Footer />
+      {phoneFrame ? (
+        <footer className="w-full px-5 py-5 bg-[var(--lemonade-light-gray)] border-t border-gray-200 text-center">
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex items-center gap-2">
+              <img src="/images/paw-policy-logo.png" alt="Paw Policy" className="h-8 w-auto rounded-lg" />
+              <span className="text-base font-bold text-[#4A4A4A]">Paw Policy</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-[var(--lemonade-gray)]">
+              <Link href={`${homeHref}/contact`} className="hover:text-[var(--accent)] transition-colors">Contact Us</Link>
+              <span>·</span>
+              <Link href={`${homeHref}/terms`} className="hover:text-[var(--accent)] transition-colors">Terms</Link>
+              <span>·</span>
+              <Link href={`${homeHref}/privacy`} className="hover:text-[var(--accent)] transition-colors">Privacy</Link>
+              <span>·</span>
+              <Link href={`${homeHref}/ccpa`} className="hover:text-[var(--accent)] transition-colors">CCPA</Link>
+            </div>
+            <p className="text-[10px] text-[var(--lemonade-gray)] leading-snug">
+              &copy; {new Date().getFullYear()} Paw Policy. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      ) : (
+        <Footer />
+      )}
     </div>
   );
 
